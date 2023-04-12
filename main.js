@@ -5,19 +5,19 @@ function cssandjschange() {
     if(isMobile === true){
         const script = document.createElement('script');
         script.id = 'mobile_script';
-        script.src = 'mobile_script.js';
+        script.src = 'scripts/mobile_script.js';
         document.head.appendChild(script);
 
-        document.getElementById('css_sheet').href="mobile_style.css";
+        document.getElementById('css_sheet').href="css/mobile_style.css";
     }
 
     else {
         const script = document.createElement('script');
         script.id = 'pc_script';
-        script.src = 'pc_script.js';
+        script.src = 'scripts/pc_script.js';
         document.head.appendChild(script);
 
-        document.getElementById('css_sheet').href="pc_style.css";
+        document.getElementById('css_sheet').href="css/pc_style.css";
     }
 
 }
