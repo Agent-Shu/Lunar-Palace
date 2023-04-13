@@ -11,6 +11,30 @@
     background-attachment: fixed;
 }
 
+@font-face { 
+    font-family: genshin; 
+    src: url("../font/genshin.ttf"); 
+} 
+
+.home_page_image{
+    position: absolute;
+    left: 0vw;
+    top: 0vh;
+    width: 100vw;
+    height: 100vh;
+
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+
+
+
 
 
 

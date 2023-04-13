@@ -1,7 +1,32 @@
 [
     {
+        "name": "Albedo",
+        "img":["./Images/Char_Icon/Albedo.png","./Images/Characters/Mondstadt/Albedo.png"],
+        "build_type":"OFF Field DPS",
+
+        "vision":"Geo",
+        "weapon_type":"Sword",
+
+        "weapon_1":["Cinnabar Sindle","./Images/Weapons/Cinnabar_Spindle.webp"],
+        "weapon_2":["Harbinger of Dawn","./Images/Weapons/Harbinger_of_Dawn.webp"],
+        "weapon_3":["Primodial Jade Cutter","./Images/Weapons/Primordial_Jade_Cutter.webp"],
+        "weapon_4":["Mistsplitter Reforged","./Images/Weapons/Mistsplitter_Reforged.webp"],
+        "weapon_5":["Freedom Sworn","./Images/Weapons/Freedom_Sworn.webp"],
+
+        "artifact_1":["Husk of Opulent Dreams","./Images/Artifacts/Husk.webp"],
+        "artifact_2":["Husk of Opulent Dreams + Archaic Petra","./Images/Artifacts/Husk.webp","./Images/Artifacts/Archaic.webp"],
+        "artifact_3":["Noblesse Oblige + Archaic Petra","./Images/Artifacts/Noblesse.webp","./Images/Artifacts/Archaic.webp"],
+        "artifact_4":["Tenacity of the Millelith","./Images/Artifacts/Tenacity.webp"],
+        "artifact_5":["Noblesse Oblige","./Images/Artifacts/Noblesse.webp"],
+
+        "main_stat":["Def%","Geo Dmg","Crit Rate/ Crit Dmg/ Def%"],
+        "stat_priority":["Crit Rate/ Crit Dmg","Def%","Atk%","Energy Recharge","Flat Def"],
+        "talent_order":["Skill","Burst","Normal"]        
+    },
+
+    {
         "name": "",
-        "img":"",
+        "img":["",""],
         "build_type":"",
 
         "vision":"",
@@ -13,20 +38,18 @@
         "weapon_4":["",""],
         "weapon_5":["",""],
 
-
         "artifact_1":["",""],
         "artifact_2":["",""],
         "artifact_3":["",""],
         "artifact_4":["",""],
         "artifact_5":["",""],
 
-        
-
-
+        "main_stat":["","",""],
+        "stat_priority":["","","","",""],
+        "talent_order":["","",""]        
     }
 
     
-
 
 
 
