@@ -1,5 +1,4 @@
 let x = 0;
-
 fetch('./data/data.json')
 .then(response => response.json())
 .then(json => { 
@@ -18,36 +17,20 @@ fetch('./data/data.json')
 
 
 
-
-
-
-
-
-
+const images = [
+  "../Images/Home_Page/Monstadt.jpg",
+  "../Images/Home_Page/Liyue.png", 
+  "../Images/Home_Page/Inazuma.png",
+  "../Images/Home_Page/Sumeru.jpg"
+];
 let ch = 0;
-const temp = setInterval(() =>{
-    ch = Math.floor(Math.random() * 4);
-    console.log(ch);
-
-    if(ch == 0)
-        document.getElementsByClassName("home_page_image")[0].src = "./Images/Home_Page/Monstadt.jpg" ;
-
-    if(ch == 1)
-        document.getElementsByClassName("home_page_image")[0].src = "./Images/Home_Page/Liyue.png" ;
-        
-    if(ch == 2)
-        document.getElementsByClassName("home_page_image")[0].src = "./Images/Home_Page/Inazuma.png" ;
-
-    if(ch == 3)
-        document.getElementsByClassName("home_page_image")[0].src = "./Images/Home_Page/Sumeru.jpg" ;
-   
-}, 3000);
-
-
-
-
-
-
+function bg_change(){
+    const temp = setInterval(() =>{
+        ch = Math.floor(Math.random() * 4);
+        document.getElementsByClassName("background_image")[0].style.backgroundImage = `url(${images[ch]})`;
+    }, 5000);
+}
+bg_change();
 
 
 
@@ -67,6 +50,10 @@ const temp = setInterval(() =>{
 // console.log(json);
 
 // console.log(json.filter((item) => { return item.id == 2;}));
+
+
+
+
 
 
 

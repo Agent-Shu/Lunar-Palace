@@ -3,6 +3,11 @@
     padding: 0px;
 }
 
+@font-face { 
+    font-family: genshin; 
+    src: url("../font/genshin.ttf"); 
+} 
+
 .body{
     background-color: black;
     background-position: center center;
@@ -11,25 +16,39 @@
     background-attachment: fixed;
 }
 
-@font-face { 
-    font-family: genshin; 
-    src: url("../font/genshin.ttf"); 
-} 
-
-.home_page_image{
+.background_image{
     position: absolute;
     left: 0vw;
     top: 0vh;
     width: 100vw;
     height: 100vh;
 
-    animation: fadeIn 1s;
+    background-image: url("../Images/Home_Page/Monstadt.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: cubic-bezier(0.86, 0.06, 0.26, 0.96) 2s;
+    filter: blur(2.5px);
 }
 
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+.nav_bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    position: absolute;
+    top: 2.5vh;
+    left: 4vw;
+    width: 92vw;
+    height: 2.5vw;
+
+    background-color: rgba(255, 255, 255, 0.452);
+    border-radius: 30px;
 }
+
+
 
 
 
