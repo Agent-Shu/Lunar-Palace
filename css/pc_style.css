@@ -134,12 +134,13 @@
     border-radius: 5px;
     overflow: hidden;
     outline: solid 2px;
-    outline-color: rgba(255, 255, 255, 0.255);
+    outline-color: rgba(255, 255, 255, 0.308);
     transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out, outline-style 0.4s ease-in-out;
 }
 
 .latest_char_1:hover{
     cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.25);
     background-image: var(--dendro);
     outline-style: inset;
     outline-color: rgb(245, 219, 72);
