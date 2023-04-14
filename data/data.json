@@ -1,6 +1,7 @@
 [
     {
         "name": "Albedo",
+        "quality":"",
         "img":["./Images/Char_Icon/Albedo.png","./Images/Characters/Mondstadt/Albedo.png"],
         "country":"Mondstadt",
         "build_type":"OFF Field DPS",
@@ -27,6 +28,7 @@
 
     {
         "name": "",
+        "quality":"",
         "img":["",""],
         "country":"",
         "build_type":"",

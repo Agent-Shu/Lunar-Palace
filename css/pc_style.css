@@ -1,6 +1,8 @@
 :root{
     margin: 0px;
     padding: 0px;
+
+    --dendro: linear-gradient(319deg, #7cc472 0%, #c5fabe 37%, #8ec287 100%);
 }
 
 @font-face { 
@@ -29,28 +31,134 @@
     background-size: cover;
     background-attachment: fixed;
     transition: cubic-bezier(0.86, 0.06, 0.26, 0.96) 2s;
-    filter: blur(2.5px);
+    /* filter: blur(2.5px); */
 }
 
 .nav_bar{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
     position: absolute;
-    top: 2.5vh;
-    left: 4vw;
-    width: 92vw;
+    top: 0vh;
+    left: 0vw;
+    width: 100vw;
     height: 2.5vw;
 
-    background-color: rgba(255, 255, 255, 0.452);
-    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.452);
+    z-index: 100;
 }
 
+.nav_bar_item{
+    font-family: genshin;
+    color: rgb(153, 167, 180);
+    font-size: 20px;
+    padding-inline: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    transition: color 0.4s ease-in-out, box-shadow 0.3s ease-in-out, border-radius 0.25s ease-in-out;
+}
 
+.nav_bar_item:hover{
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    box-shadow: inset 130px 0 0 0 #02a4aac4;
+    border-radius: 8px;
+}
 
+.home_page{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top:0vh;
+    left: 0vw;
+    width: 100vw;
+    height: 100vh;
 
+    transition: ease-in-out 1.5s;
+}
+
+.welcome_text{
+    position: absolute;
+    top: 14vh;
+    left: 16.5vw;
+
+    font-family: genshin;
+    font-size: 6vw;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.welcome_text:hover{
+    cursor: default;
+}
+
+.latest_char_box_text{
+    position: absolute;
+    left: 20.5vw;
+    top: 72.5vh;
+
+    font-family: genshin;
+    font-size: 1.1vw;
+    color: rgba(255, 255, 255, 0.473);
+}
+
+.latest_char_box{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.301);
+
+    position: absolute;
+    top: 75vh;
+    left: 20vw;
+    height: 8vw;
+    width: 60vw;
+    border-radius: 8px;
+
+    backdrop-filter: blur(7px);
+    border: 2px solid rgba(255, 255, 255, 0.255);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+}
+
+.latest_char_1{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    top: 0.55vw;
+    left: 1vw;
+    width: 5.5vw;
+    height: 6.9vw;
+    background-color: rgba(255, 255, 255, 0.27);
+    border-radius: 5px;
+    overflow: hidden;
+    outline: solid 2px;
+    outline-color: rgba(255, 255, 255, 0.255);
+    transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out, outline-style 0.4s ease-in-out;
+}
+
+.latest_char_1:hover{
+    cursor: pointer;
+    background-image: var(--dendro);
+    outline-style: inset;
+    outline-color: rgb(245, 219, 72);
+}
+
+.latest_char_1_img{
+    position: absolute;
+    left: -1.1px;
+    top:-2px;
+    width: 5.2vw;
+    height: 5.4vw;
+}
+
+.latest_char_1_text{
+    font-family: genshin;
+    font-size: 0.9vw;
+    position: relative;
+    top: 5.5vw;   
+}
 
 
 
