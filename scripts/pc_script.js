@@ -1,21 +1,73 @@
+function goto_home(){
+
+    document.getElementsByClassName("home_page")[0].style.top = "0vh";
+    document.getElementsByClassName("home_page")[0].style.opacity = "1";
+
+    document.getElementsByClassName("character_page")[0].style.top = "-100vh";
+    document.getElementsByClassName("character_page")[0].style.opacity = "0";
+
+}
+
+function goto_character(){
+
+    document.getElementsByClassName("home_page")[0].style.top = "-100vh";
+    document.getElementsByClassName("home_page")[0].style.opacity = "0";
+    
+
+    document.getElementsByClassName("character_page")[0].style.top = "0vh";
+    document.getElementsByClassName("character_page")[0].style.opacity = "1";
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let x = 0;
 fetch('./data/data.json')
 .then(response => response.json())
 .then(json => { 
-
-    
     x = json.filter((item) => { return item.name == "Albedo";});
-
     // if(x[0] != null)
         // console.log(x[0].img[0]);
 
     // document.getElementsByClassName("image")[0].src = x[0].img[0];
-
 });
-
-
-
-
 
 const images = [
   "../Images/Home_Page/Monstadt.jpg",
@@ -47,8 +99,15 @@ bg_change();
 
 
 
-// console.log(json);
 
+
+
+
+
+
+
+
+// console.log(json);
 // console.log(json.filter((item) => { return item.id == 2;}));
 
 

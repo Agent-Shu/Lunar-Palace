@@ -16,6 +16,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+
+    overflow: hidden;
 }
 
 .background_image{
@@ -75,14 +77,14 @@
     left: 0vw;
     width: 100vw;
     height: 100vh;
-
+    opacity: 1;
     transition: ease-in-out 1.5s;
 }
 
 .welcome_text{
     position: absolute;
     top: 14vh;
-    left: 16.5vw;
+    left: 24vw;
 
     font-family: genshin;
     font-size: 6vw;
@@ -116,7 +118,7 @@
     width: 60vw;
     border-radius: 8px;
 
-    backdrop-filter: blur(7px);
+    backdrop-filter: blur(6px);
     border: 2px solid rgba(255, 255, 255, 0.255);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
 }
@@ -160,6 +162,76 @@
     position: relative;
     top: 5.5vw;   
 }
+
+
+
+.character_page{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top:-100vh;
+    left: 0vw;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    transition: ease-in-out 1.5s;
+}
+
+.charcter_scroller{
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgba(255, 255, 255, 0.301);
+    backdrop-filter: blur(6px);
+    border: 2px solid rgba(255, 255, 255, 0.255);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+
+    overflow-y: hidden;
+    scroll-snap-type: y proximity;
+    scroll-snap-align: center;
+
+    position: absolute;
+    top: 8vh;
+    left: 3vw;
+    width: 6.5vw;
+    height: 88vh;
+    border-radius: 10px;
+}
+
+.scroll_nav_text{
+    position: absolute;
+    top: 48vh;
+    left: -0.5vw;
+    font-family: genshin;
+    font-size: 1.5vw;
+    color: rgba(255, 255, 255, 0.486);
+    transform: rotate(90deg);
+}
+
+.scroll_nav_text:hover{
+    cursor: default;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

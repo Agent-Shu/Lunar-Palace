@@ -1,7 +1,7 @@
 [
     {
         "name": "Albedo",
-        "quality":"",
+        "quality":"5",
         "img":["./Images/Char_Icon/Albedo.png","./Images/Characters/Mondstadt/Albedo.png"],
         "country":"Mondstadt",
         "build_type":"OFF Field DPS",
@@ -9,11 +9,11 @@
         "vision":"Geo",
         "weapon_type":"Sword",
 
-        "weapon_1":["Cinnabar Sindle","../Images/Weapons/Cinnabar_Spindle.webp"],
-        "weapon_2":["Harbinger of Dawn","../Images/Weapons/Harbinger_of_Dawn.webp"],
-        "weapon_3":["Primodial Jade Cutter","../Images/Weapons/Primordial_Jade_Cutter.webp"],
-        "weapon_4":["Mistsplitter Reforged","../Images/Weapons/Mistsplitter_Reforged.webp"],
-        "weapon_5":["Freedom Sworn","../Images/Weapons/Freedom_Sworn.webp"],
+        "weapon_1":["Cinnabar Sindle","../Images/Weapons/Sword/Cinnabar_Spindle.webp"],
+        "weapon_2":["Harbinger of Dawn","../Images/Weapons/Sword/Harbinger_of_Dawn.webp"],
+        "weapon_3":["Primodial Jade Cutter","../Images/Weapons/Sword/Primordial_Jade_Cutter.webp"],
+        "weapon_4":["Mistsplitter Reforged","../Images/Weapons/Sword/Mistsplitter_Reforged.webp"],
+        "weapon_5":["Freedom Sworn","../Images/Weapons/Sword/Freedom_Sworn.webp"],
 
         "artifact_1":["Husk of Opulent Dreams","../Images/Artifacts/Husk.webp"],
         "artifact_2":["Husk of Opulent Dreams + Archaic Petra","../Images/Artifacts/Husk.webp","../Images/Artifacts/Archaic.webp"],
