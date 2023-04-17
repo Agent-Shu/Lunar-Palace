@@ -5,6 +5,11 @@
     --dendro: linear-gradient(319deg, #7cc472 0%, #c5fabe 37%, #8ec287 100%);
 }
 
+::-webkit-scrollbar {
+    height: 1px;
+    width: 1px;
+}
+
 @font-face { 
     font-family: genshin; 
     src: url("../font/genshin.ttf"); 
@@ -65,7 +70,7 @@
 .nav_bar_item:hover{
     cursor: pointer;
     color: rgb(255, 255, 255);
-    box-shadow: inset 130px 0 0 0 #02a4aac4;
+    box-shadow: inset 179px 0 0 0 #02a4aac4;
     border-radius: 8px;
 }
 
@@ -84,7 +89,7 @@
 .welcome_text{
     position: absolute;
     top: 14vh;
-    left: 24vw;
+    left: 26.6vw;
 
     font-family: genshin;
     font-size: 6vw;
@@ -169,12 +174,12 @@
     display: flex;
     flex-direction: row;
     position: absolute;
-    top:-100vh;
-    left: 0vw;
+    top: 0vh;
+    left: -100vw;
     width: 100vw;
     height: 100vh;
     opacity: 1;
-    transition: ease-in-out 1.5s;
+    transition: ease-in-out 1s;
 }
 
 .charcter_scroller{
@@ -186,24 +191,25 @@
     border: 2px solid rgba(255, 255, 255, 0.255);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
 
-    overflow-y: hidden;
-    scroll-snap-type: y proximity;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
     scroll-snap-align: center;
 
     position: absolute;
-    top: 8vh;
-    left: 3vw;
+    top: 5vh;
+    left: 0vw;
     width: 6.5vw;
-    height: 88vh;
-    border-radius: 10px;
+    height: 94.5vh;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .scroll_nav_text{
     position: absolute;
     top: 48vh;
-    left: -0.5vw;
+    left: 6vw;
     font-family: genshin;
-    font-size: 1.5vw;
+    font-size: 1.1vw;
     color: rgba(255, 255, 255, 0.486);
     transform: rotate(90deg);
 }
@@ -212,8 +218,24 @@
     cursor: default;
 }
 
+.charcter_scroller_item{
+    scroll-snap-align: center;
+    position: relative;
+    top: 0.5vh;
+    left: 1.1vw;
+    height: 8.5vh;
+    width: 4.2vw;
+    margin-bottom: 1.4vh;
+}
 
+.scroller_img{
+    height: 8.5vh;
+    width: 4.2vw; 
+}
 
+.scroller_img:hover{
+    cursor: pointer;
+}
 
 
 

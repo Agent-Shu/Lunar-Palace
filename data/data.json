@@ -9,40 +9,148 @@
         "vision":"Geo",
         "weapon_type":"Sword",
 
-        "weapon_1":["Cinnabar Sindle","../Images/Weapons/Sword/Cinnabar_Spindle.webp"],
-        "weapon_2":["Harbinger of Dawn","../Images/Weapons/Sword/Harbinger_of_Dawn.webp"],
-        "weapon_3":["Primodial Jade Cutter","../Images/Weapons/Sword/Primordial_Jade_Cutter.webp"],
-        "weapon_4":["Mistsplitter Reforged","../Images/Weapons/Sword/Mistsplitter_Reforged.webp"],
-        "weapon_5":["Freedom Sworn","../Images/Weapons/Sword/Freedom_Sworn.webp"],
+        "weapon_1":["Cinnabar Sindle","./Images/Weapons/Sword/Cinnabar_Spindle.webp"],
+        "weapon_2":["Harbinger of Dawn","./Images/Weapons/Sword/Harbinger_of_Dawn.webp"],
+        "weapon_3":["Primodial Jade Cutter","./Images/Weapons/Sword/Primordial_Jade_Cutter.webp"],
+        "weapon_4":["Mistsplitter Reforged","./Images/Weapons/Sword/Mistsplitter_Reforged.webp"],
+        "weapon_5":["Freedom Sworn","./Images/Weapons/Sword/Freedom_Sworn.webp"],
 
-        "artifact_1":["Husk of Opulent Dreams","../Images/Artifacts/Husk.webp"],
-        "artifact_2":["Husk of Opulent Dreams + Archaic Petra","../Images/Artifacts/Husk.webp","../Images/Artifacts/Archaic.webp"],
-        "artifact_3":["Noblesse Oblige + Archaic Petra","../Images/Artifacts/Noblesse.webp","../Images/Artifacts/Archaic.webp"],
-        "artifact_4":["Tenacity of the Millelith","../Images/Artifacts/Tenacity.webp"],
-        "artifact_5":["Noblesse Oblige","../Images/Artifacts/Noblesse.webp"],
+        "artifact_1":["Husk of Opulent Dreams","./Images/Artifacts/Husk.webp"],
+        "artifact_2":["Husk of Opulent Dreams + Archaic Petra","./Images/Artifacts/Husk.webp","./Images/Artifacts/Archaic.webp"],
+        "artifact_3":["Noblesse Oblige + Archaic Petra","./Images/Artifacts/Noblesse.webp","./Images/Artifacts/Archaic.webp"],
+        "artifact_4":["Tenacity of the Millelith","./Images/Artifacts/Tenacity.webp"],
+        "artifact_5":["Noblesse Oblige","./Images/Artifacts/Noblesse.webp"],
 
-        "main_stat":["Def%","Geo Dmg","Crit Rate/ Crit Dmg/ Def%"],
-        "stat_priority":["Crit Rate/ Crit Dmg","Def%","Atk%","Energy Recharge","Flat Def"],
+        "main_stat":["Def%","Geo Dmg","Crit Rate / Crit Dmg / Def%"],
+        "stat_priority":["Crit Rate / Crit Dmg","Def%","Atk%","Energy Recharge","Flat Def"],
         "talent_order":["Skill","Burst","Normal"]        
     },
 
     {
-        "name": "",
-        "quality":"",
-        "img":["",""],
-        "country":"",
-        "build_type":"",
+        "name": "Alhaitham",
+        "quality":"5",
+        "img":["./Images/Char_Icon/Alhaitham.png","./Images/Characters/Sumeru/Alhitham.png"],
+        "country":"Sumeru",
+        "build_type":"Spread DPS",
 
-        "vision":"",
-        "weapon_type":"",
+        "vision":"Dendro",
+        "weapon_type":"Sword",
 
-        "weapon_1":["",""],
-        "weapon_2":["",""],
-        "weapon_3":["",""],
-        "weapon_4":["",""],
+        "weapon_1":["Light of Foliar Incision",""],
+        "weapon_2":["Primordial Jade Cutter","./Images/Weapons/Sword/Primordial_Jade_Cutter.webp"],
+        "weapon_3":["Mistsplitter Reforged","./Images/Weapons/Sword/Mistsplitter_Reforged.webp"],
+        "weapon_4":["Freedom-Sworn","./Images/Weapons/Sword/Freedom_Sworn.webp"],
+        "weapon_5":["The Black Sword","./Images/Weapons/Sword/The_Black_Sword.webp"],
+
+        "artifact_1":["Gilded Dreams","./Images/Artifacts/Gilded.webp"],
+        "artifact_2":["Deepwood Memories + Emblem of Severed Fate","./Images/Artifacts/Deepwood.webp","./Images/Artifacts/Emblem.webp"],
+        "artifact_3":["Deepwood Memories + Any 80 EM Set","./Images/Artifacts/Deepwood.webp",""],
+        "artifact_4":["Deepwood Memories","./Images/Artifacts/Deepwood.webp"],
+        "artifact_5":["",""],
+
+        "main_stat":["Elemental Mastery / Atk%","Dendro Dmg","Crit Rate / Crit Dmg"],
+        "stat_priority":["Energy Recharge","Crit Rate / Crit Dmg","Elemental Mastery","Atk%","Flat Atk"],
+        "talent_order":["Skill","Normal","Burst"]        
+    },
+
+    {
+        "name": "Aloy",
+        "quality":"5",
+        "img":["./Images/Char_Icon/Aloy.png","./Images/Characters/Mondstadt/Aloy.png"],
+        "country":"Mondstadt",
+        "build_type":"Burst Support",
+
+        "vision":"Cryo",
+        "weapon_type":"Bow",
+
+        "weapon_1":["Thundering Pulse","./Images/Weapons/Bow/Thundering_Pulse.webp"],
+        "weapon_2":["Polar Star","./Images/Weapons/Bow/Polar_Star.webp"],
+        "weapon_3":["Skyward Harp ","./Images/Weapons/Bow/Skyward_Harp.webp"],
+        "weapon_4":["The Stringless ","./Images/Weapons/Bow/The_Stringless.webp"],
+        "weapon_5":["Amos' Bow","./Images/Weapons/Bow/Amos_Bow.webp"],
+
+        "artifact_1":["Blizzard Strayer","./Images/Artifacts/Blizzard.webp"],
+        "artifact_2":["Blizzard Strayer + Noblesse Oblige","./Images/Artifacts/Blizzard.webp","./Images/Artifacts/Noblesse.webp"],
+        "artifact_3":["Emblem of Severed Fate","./Images/Artifacts/Emblem.webp"],
+        "artifact_4":["Emblem of Severed Fate + Noblesse Oblige","./Images/Artifacts/Emblem.webp","./Images/Artifacts/Noblesse.webp"],
+        "artifact_5":["Noblesse Oblige","./Images/Artifacts/Noblesse.webp"],
+
+        "main_stat":["Elemental Mastery / Atk%","Cryo Dmg","Crit Rate / Crit Dmg"],
+        "stat_priority":["Crit Rate / Crit Dmg","Atk%","Elemental Mastery","Energy Recharge","Flat Atk"],
+        "talent_order":["Burst","Skill","Normal"]        
+    },
+
+    {
+        "name": "Amber",
+        "quality":"4",
+        "img":["./Images/Char_Icon/Amber.png","./Images/Characters/Mondstadt/Amber.png"],
+        "country":"Mondstadt",
+        "build_type":"DPS",
+
+        "vision":"Pyro",
+        "weapon_type":"Bow",
+
+        "weapon_1":["Amos' Bow","./Images/Weapons/Bow/Amos_Bow.webp"],
+        "weapon_2":["Thundering Pulse","./Images/Weapons/Bow/Thundering_Pulse.webp"],
+        "weapon_3":["Aqua Simulacra","./Images/Weapons/Bow/Aqua_Simulacra.webp"],
+        "weapon_4":["Skyward Harp","./Images/Weapons/Bow/Skyward_Harp.webp"],
+        "weapon_5":["Prototype Crescent","./Images/Weapons/Bow/Prototype_Crescent.webp"],
+
+        "artifact_1":["Wanderer's Troupe","./Images/Artifacts/Wanderer.webp"],
+        "artifact_2":["Shimenawa's Reminiscence","./Images/Artifacts/Shimenawa.webp"],
+        "artifact_3":["Crimson Witch of Flames","./Images/Artifacts/Crimson.webp"],
+        "artifact_4":["Crimson Witch of Flames + Any 80 EM set","./Images/Artifacts/Crimson.webp","./Images/Artifacts/Gilded.webp"],
+        "artifact_5":["Crimson Witch of Flames + Any 18% ATK set","./Images/Artifacts/Crimson.webp","./Images/Artifacts/Gladiator.webp"],
+
+        "main_stat":["Atk% / Elemental Mastery","Pyro Dmg","Crit Dmg"],
+        "stat_priority":["Crit Dmg","Atk%","Elemental Mastery","Energy Recharge","Flat Atk"],
+        "talent_order":["Normal","Burst","Skill"]        
+    },
+
+    {
+        "name": "Amber",
+        "quality":"4",
+        "img":["./Images/Char_Icon/Amber.png","./Images/Characters/Mondstadt/Amber.png"],
+        "country":"Mondstadt",
+        "build_type":"Support",
+
+        "vision":"Pyro",
+        "weapon_type":"Bow",
+
+        "weapon_1":["Elegy for the End","./Images/Weapons/Bow/Elegy_for_the_End.webp"],
+        "weapon_2":["Favonius Warbow","./Images/Weapons/Bow/Favonius_Warbow.webp"],
+        "weapon_3":["Sacrificial Bow","./Images/Weapons/Bow/Sacrificial_Bow.webp"],
+        "weapon_4":["The Viridescent Hunt","./Images/Weapons/Bow/The_Viridescent_Hunt.webp"],
         "weapon_5":["",""],
 
-        "artifact_1":["",""],
+        "artifact_1":["Noblesse Oblige","./Images/Artifacts/Noblesse.webp"],
+        "artifact_2":["Instructor","./Images/Artifacts/Instructor.webp"],
+        "artifact_3":["Any 20% Energy Recharge set + Any 20% Energy Recharge set",""],
+        "artifact_4":["The Exile","","./Images/Artifacts/Exile.webp"],
+        "artifact_5":["",""],
+
+        "main_stat":["Energy Recharge / Atk%","Pyro Dmg","Crit Rate / Crit Dmg"],
+        "stat_priority":["Energy Recharge","Crit Rate / Crit Dmg","Atk%","Elemental Mastery","Flat Atk"],
+        "talent_order":["Burst","Skill","Normal"]        
+    },
+
+    {
+        "name": "Ayaka",
+        "quality":"5",
+        "img":["./Images/Char_Icon/Ayaka.png","./Images/Characters/Inazuma/Ayaka.png"],
+        "country":"Inazuma",
+        "build_type":"DPS",
+
+        "vision":"Cryo",
+        "weapon_type":"Sword",
+
+        "weapon_1":["Mistsplitter Reforged","./Images/Weapons/Sword/Mistsplitter_Reforged.webp"],
+        "weapon_2":["Haran Geppaku Futsu","./Images/Weapons/Sword/Haran_Geppaku.webp"],
+        "weapon_3":["Primordial Jade Cutter","./Images/Weapons/Sword/Primordial_Jade_Cutter.webp"],
+        "weapon_4":["Aquila Favonia","./Images/Weapons/Sword/Aquila_Favonia.webp"],
+        "weapon_5":["Amenoma Kageuchi","./Images/Weapons/Sword/Amenoma_Kageuchi.webp"],
+
+        "artifact_1":["Blizzard Strayer","./Images/Artifacts/Blizzard.webp"],
         "artifact_2":["",""],
         "artifact_3":["",""],
         "artifact_4":["",""],
@@ -52,8 +160,6 @@
         "stat_priority":["","","","",""],
         "talent_order":["","",""]        
     }
-
-    
 
 
 

@@ -3,24 +3,33 @@ function goto_home(){
     document.getElementsByClassName("home_page")[0].style.top = "0vh";
     document.getElementsByClassName("home_page")[0].style.opacity = "1";
 
-    document.getElementsByClassName("character_page")[0].style.top = "-100vh";
+    document.getElementsByClassName("character_page")[0].style.left = "-100vw";
     document.getElementsByClassName("character_page")[0].style.opacity = "0";
 
 }
 
-function goto_character(){
+function goto_character(character){
+
+    character_select(character);
 
     document.getElementsByClassName("home_page")[0].style.top = "-100vh";
     document.getElementsByClassName("home_page")[0].style.opacity = "0";
     
 
-    document.getElementsByClassName("character_page")[0].style.top = "0vh";
+    document.getElementsByClassName("character_page")[0].style.left = "0vw";
     document.getElementsByClassName("character_page")[0].style.opacity = "1";
 
 }
 
 
+function character_select()
+{
 
+
+
+
+    
+}
 
 
 
