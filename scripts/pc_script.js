@@ -67,28 +67,46 @@ function character_select()
 
 
 
-let x = 0;
 fetch('./data/data.json')
 .then(response => response.json())
 .then(json => { 
-    x = json.filter((item) => { return item.name == "Albedo";});
-    // if(x[0] != null)
-        // console.log(x[0].img[0]);
+    let x = json.filter((item) => { return item.name == "Amber";});
 
-    // document.getElementsByClassName("image")[0].src = x[0].img[0];
+    if(x[0] != null)
+        
+        
+        console.log(x[0].build_type);
+
+        // console.log(typeof((x[0].build_type[0])));
+
+
+
+
+    // for (let key in x[0].build_type) {
+    //     console.log(key);
+    //     // console.log(x[0].build_type[key]);
+    // }
+
+
+
 });
 
+
+
+
+
+
+
 const images = [
-  "../Images/Home_Page/Monstadt.jpg",
-  "../Images/Home_Page/Liyue.png", 
-  "../Images/Home_Page/Inazuma.png",
-  "../Images/Home_Page/Sumeru.jpg"
+  "./Images/Home_Page/Monstadt.jpg",
+  "./Images/Home_Page/Liyue.png", 
+  "./Images/Home_Page/Inazuma.png",
+  "./Images/Home_Page/Sumeru.jpg"
 ];
-let ch = 0;
+
 function bg_change(){
     const temp = setInterval(() =>{
-        ch = Math.floor(Math.random() * 4);
-        document.getElementsByClassName("background_image")[0].style.backgroundImage = `url(${images[ch]})`;
+        document.getElementsByClassName("background_image")[0].style.backgroundImage = `url(${images[Math.floor(Math.random() * 4)]})`;
     }, 5000);
 }
 bg_change();
