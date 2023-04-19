@@ -117,7 +117,7 @@
 
         "build_type":[
             {   
-                "built":"Burst_Support",
+                "built":"DPS",
                         
                 "weapon_1":["Amos' Bow (5✩)",                "./Images/Weapons/Bow/Weapon_Amos_Bow.webp"],
                 "weapon_2":["Thundering Pulse (5✩)",         "./Images/Weapons/Bow/Weapon_Thundering_Pulse.webp"],

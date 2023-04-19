@@ -74,18 +74,13 @@ fetch('./data/data.json')
 
     if(x[0] != null)
         
-        
         console.log(x[0].build_type);
 
-        // console.log(typeof((x[0].build_type[0])));
+
+    for (let key in x[0].build_type)
+        console.log(key);
 
 
-
-
-    // for (let key in x[0].build_type) {
-    //     console.log(key);
-    //     // console.log(x[0].build_type[key]);
-    // }
 
 
 
