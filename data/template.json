@@ -1,6 +1,7 @@
 [
     {
         "name": "",
+        "fullname":"",
         "quality":"",
         "img":["",""],
         "country":"",
@@ -33,6 +34,5 @@
                 "talent_order":["","",""]
             }
         ]
-
     }
 ]
