@@ -7,6 +7,7 @@
         "country":"Mondstadt",
         "vision":"Geo",
         "weapon_type":"Sword",
+        "about":"A genius known as the Kreideprinz, he is the Chief Alchemist and Captain of the Investigation Team of the Knights of Favonius.",
         
         "build_type":[
             {      
@@ -44,6 +45,7 @@
         "country":"Sumeru",
         "vision":"Dendro",
         "weapon_type":"Sword",
+        "about":"The current scribe of the Sumeru Akademiya, a man endowed with extraordinary intelligence and talent. He lives free — free from the searching eyes of ordinary people, anyway.",
 
         "build_type":[
             {   
@@ -81,6 +83,7 @@
         "country":"Another World",
         "vision":"Cryo",
         "weapon_type":"Bow",
+        "about":"Formerly an outcast, now a hunter of unparalleled skill. Ready to do the right thing at any time.",
 
         "build_type":[
             {   
@@ -118,6 +121,7 @@
         "country":"Mondstadt",
         "vision":"Pyro",
         "weapon_type":"Bow",
+        "about":"Always energetic and full of life, Amber's the best — albeit only — Outrider of the Knights of Favonius.",
 
         "build_type":[
             {   
@@ -180,6 +184,7 @@
         "country":"Inazuma",
         "vision":"Cryo",
         "weapon_type":"Sword",
+        "about":"Daughter of the Yashiro Commission's Kamisato Clan. Dignified and elegant, as well as wise and strong.",
 
         "build_type":[
             {   
@@ -217,6 +222,7 @@
         "country":"Inazuma",
         "vision":"Hydro",
         "weapon_type":"Sword",
+        "about":"The young but highly accomplished head of the Yashiro Commission's Kamisato Clan. Cultured and polite, he is a man of many ways and means.",
         
         "build_type":[
             {   
@@ -254,6 +260,7 @@
         "country":"Mondstadt",
         "vision":"Hydro",
         "weapon_type":"Catalyst",
+        "about":"Every citizen of Mondstadt adores Barbara. She learned the word 'idol' from a magazine.",
         
         "build_type":[
             {   
@@ -316,6 +323,7 @@
         "country":"Liyue",
         "vision":"Electro",
         "weapon_type":"Claymore",
+        "about":"Captain of her crew, The Crux. She's quite an unbound and forthright woman.",
         
         "build_type":[
             {   
@@ -353,6 +361,7 @@
         "country":"Mondstadt",
         "vision":"Pyro",
         "weapon_type":"Sword",
+        "about":"A good-natured adventurer from Mondstadt who's unfortunately extremely unlucky.",
         
         "build_type":[
             {   
