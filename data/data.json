@@ -5,8 +5,8 @@
         "quality":"5",
         "img":["./Images/Char_Icon/Albedo.png","./Images/Characters/Mondstadt/Albedo.png"],
         "country":"Mondstadt",
-        "vision":"Geo",
-        "weapon_type":"Sword",
+        "vision":["Geo","./Images/Vision Icon/Geo.png"],
+        "weapon":["Sword","./Images/Weapon Icon/Icon_Sword.webp"],
         "about":"A genius known as the Kreideprinz, he is the Chief Alchemist and Captain of the Investigation Team of the Knights of Favonius.",
         
         "build_type":[
@@ -43,8 +43,8 @@
         "quality":"5",
         "img":["./Images/Char_Icon/Alhaitham.png","./Images/Characters/Sumeru/Alhitham.png"],
         "country":"Sumeru",
-        "vision":"Dendro",
-        "weapon_type":"Sword",
+        "vision":["Dendro","./Images/Vision Icon/Dendro.png"],
+        "weapon":["Sword","./Images/Weapon Icon/Icon_Sword.webp"],
         "about":"The current scribe of the Sumeru Akademiya, a man endowed with extraordinary intelligence and talent. He lives free — free from the searching eyes of ordinary people, anyway.",
 
         "build_type":[
@@ -81,8 +81,8 @@
         "quality":"5",
         "img":["./Images/Char_Icon/Aloy.png","./Images/Characters/Mondstadt/Aloy.png"],
         "country":"Another World",
-        "vision":"Cryo",
-        "weapon_type":"Bow",
+        "vision":["Cryo","./Images/Vision Icon/Cryo.png"],
+        "weapon":["Bow","./Images/Weapon Icon/Icon_Bow.webp"],
         "about":"Formerly an outcast, now a hunter of unparalleled skill. Ready to do the right thing at any time.",
 
         "build_type":[
@@ -119,8 +119,8 @@
         "quality":"4",
         "img":["./Images/Char_Icon/Amber.png","./Images/Characters/Mondstadt/Amber.png"],
         "country":"Mondstadt",
-        "vision":"Pyro",
-        "weapon_type":"Bow",
+        "vision":["Pyro","./Images/Vision Icon/Pyro.png"],
+        "weapon":["Bow","./Images/Weapon Icon/Icon_Bow.webp"],
         "about":"Always energetic and full of life, Amber's the best — albeit only — Outrider of the Knights of Favonius.",
 
         "build_type":[
@@ -182,8 +182,8 @@
         "quality":"5",
         "img":["./Images/Char_Icon/Ayaka.png","./Images/Characters/Inazuma/Ayaka.png"],
         "country":"Inazuma",
-        "vision":"Cryo",
-        "weapon_type":"Sword",
+        "vision":["Cryo","./Images/Vision Icon/Cryo.png"],
+        "weapon":["Sword","./Images/Weapon Icon/Icon_Sword.webp"],
         "about":"Daughter of the Yashiro Commission's Kamisato Clan. Dignified and elegant, as well as wise and strong.",
 
         "build_type":[
@@ -220,8 +220,8 @@
         "quality":"5",
         "img":["./Images/Char_Icon/Ayato.png","./Images/Characters/Inazuma/Ayato.png"],
         "country":"Inazuma",
-        "vision":"Hydro",
-        "weapon_type":"Sword",
+        "vision":["Hydro","./Images/Vision Icon/Hydro.png"],
+        "weapon":["Sword","./Images/Weapon Icon/Icon_Sword.webp"],
         "about":"The young but highly accomplished head of the Yashiro Commission's Kamisato Clan. Cultured and polite, he is a man of many ways and means.",
         
         "build_type":[
@@ -258,8 +258,8 @@
         "quality":"4",
         "img":["./Images/Char_Icon/Barbara.png","./Images/Characters/Mondstadt/Barbara.png"],
         "country":"Mondstadt",
-        "vision":"Hydro",
-        "weapon_type":"Catalyst",
+        "vision":["Hydro","./Images/Vision Icon/Hydro.png"],
+        "weapon":["Catalyst","./Images/Weapon Icon/Icon_Catalyst.webp"],
         "about":"Every citizen of Mondstadt adores Barbara. She learned the word 'idol' from a magazine.",
         
         "build_type":[
@@ -321,8 +321,8 @@
         "quality":"4",
         "img":["./Images/Char_Icon/Beidou.png","./Images/Characters/Liyue/Beidou.png"],
         "country":"Liyue",
-        "vision":"Electro",
-        "weapon_type":"Claymore",
+        "vision":["Electro","./Images/Vision Icon/Electro.png"],
+        "weapon":["Claymore","./Images/Weapon Icon/Icon_Claymore.webp"],
         "about":"Captain of her crew, The Crux. She's quite an unbound and forthright woman.",
         
         "build_type":[
@@ -359,8 +359,8 @@
         "quality":"4",
         "img":["./Images/Char_Icon/Bennett.png","./Images/Characters/Mondstadt/Bennett.png"],
         "country":"Mondstadt",
-        "vision":"Pyro",
-        "weapon_type":"Sword",
+        "vision":["Pyro","./Images/Vision Icon/Pyro.png"],
+        "weapon":["Sword","./Images/Weapon Icon/Icon_Sword.webp"],
         "about":"A good-natured adventurer from Mondstadt who's unfortunately extremely unlucky.",
         
         "build_type":[

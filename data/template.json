@@ -5,8 +5,8 @@
         "quality":"",
         "img":["",""],
         "country":"",
-        "vision":"",
-        "weapon_type":"",
+        "vision":["",""],
+        "weapon_type":["",""],
         "about":"",
         
         "build_type":[

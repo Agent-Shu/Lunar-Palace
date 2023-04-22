@@ -45,7 +45,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     position: absolute;
     top: 0vh;
@@ -61,7 +61,8 @@
     font-family: genshin;
     color: rgb(153, 167, 180);
     font-size: 20px;
-    padding-inline: 10px;
+    margin-inline: 30px;
+    padding-inline: 20px;
     padding-top: 4px;
     padding-bottom: 4px;
     transition: color 0.4s ease-in-out, box-shadow 0.3s ease-in-out, border-radius 0.25s ease-in-out;
@@ -88,8 +89,8 @@
 
 .welcome_text{
     position: absolute;
-    top: 18vh;
-    left: 26.6vw;
+    top: 8vh;
+    left: 20.6vw;
 
     font-family: genshin;
     font-size: 6vw;
@@ -285,15 +286,51 @@
     color: white;
 
     text-align: right;
-    padding-top: 10px;
+    padding-top: 5px;
     padding-inline: 2px;
+}
+
+.character_type_weapon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    position: inherit;
+    top:8vh;
+    left: 79vw;
+    width: 30vw;
+    height: 5vh;
+
+    overflow: hidden;
+}
+
+.vision_icon{
+    position: relative;
+    height: 4.7vh;
+    width: auto;
+    margin-inline: 6px;
+    opacity: 0.30;
+}
+
+.weapon_icon{
+    position: relative;
+    height: 5vh;
+    width: auto;
+}
+
+.character_type_text{
+    font-family: 'Segoe UI';
+    color: white;
+    position: relative;
+    margin-inline: 6px;
+    font-size:1vw;
 }
 
 .about_box{
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 10vh;
+    top: 13vh;
     left:78.5vw;
     height: 15vh;
     width: 14vw;
@@ -366,7 +403,7 @@
     font-size: 1.4vw;
     color: white;
     padding-top: 0.2vw;
-    margin-left: 0.2vw;
+    margin-left: 0.4vw;
 }
 
 .weapon_list{
@@ -375,7 +412,7 @@
     background-color: rgba(56, 56, 56, 0.582);
 
     position: absolute;
-    top: 5vh;
+    top: 6vh;
     left: 0vw;
     width: 60vw;
     height: 31vh;
@@ -400,17 +437,13 @@
     padding-left: 1.2vw;
 }
 
-
-
-
-    
 .artifact_list{
     display:flex;
     flex-direction: column;
     background-color: rgba(56, 56, 56, 0.582);
 
     position: absolute;
-    top: 37vh;
+    top: 40vh;
     left: 0vw;
     width: 60vw;
     height: 20vh;
@@ -435,9 +468,28 @@
     padding-left: 1.2vw;
 }
 
+.artifact_stat_talent_list{
+    display:flex;
+    flex-direction: column;
+    background-color: rgba(56, 56, 56, 0.582);
 
+    position: absolute;
+    top: 63vh;
+    left: 0vw;
+    width: 45vw;
+    height: 20vh;
 
+    border-radius: 6px;
+}
 
+.artifact_stat_talent_list_text{
+    font-family: genshin;
+    font-size: 1vw;
+    color: white;
+    padding-top: 0.2vw;
+    padding-left: 0.2vw;
+    margin-bottom: 0.3vw;
+}
 
 
 
