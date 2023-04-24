@@ -51,7 +51,7 @@
     top: 0vh;
     left: 0vw;
     width: 100vw;
-    height: 2.5vw;
+    height: 5vh;
 
     background-color: rgba(0, 0, 0, 0.452);
     z-index: 100;
@@ -273,11 +273,11 @@
 
 .character_image{
     position: absolute;
-    top:38vh;
-    left:55vw;
+    top:42%;
+    left:57%;
 
     width: 49vw;
-    height: 30vw;  
+    height: auto;  
 }
 
 .name_box{
@@ -369,11 +369,12 @@
 
 .build_button_item{
     font-family: genshin;
+    font-size: 0.9vw;
     background-color: black;
     color: white;
 
     padding: 10px;
-    padding-inline: 30px;
+    padding-inline: 25px;
     border-radius: 50px;
     margin-right: 8px;
     text-align: center;
@@ -402,7 +403,10 @@
     font-family: genshin;
     font-size: 1.4vw;
     color: white;
-    padding-top: 0.2vw;
+
+    position: absolute;
+
+    padding-top: 0.2vh;
     margin-left: 0.4vw;
 }
 
