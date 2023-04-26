@@ -273,7 +273,7 @@
 
 .character_image{
     position: absolute;
-    top:42%;
+    top:41%;
     left:57%;
 
     width: 49vw;
@@ -406,7 +406,7 @@
 
     position: absolute;
 
-    padding-top: 0.2vh;
+    margin-top: 0.2vh;
     margin-left: 0.4vw;
 }
 
@@ -480,7 +480,7 @@
     position: absolute;
     top: 63vh;
     left: 0vw;
-    width: 45vw;
+    width: 55vw;
     height: 20vh;
 
     border-radius: 6px;
@@ -488,14 +488,21 @@
 
 .artifact_stat_talent_list_text{
     font-family: genshin;
-    font-size: 1vw;
+    font-size: 0.8vw;
     color: white;
     padding-top: 0.2vw;
     padding-left: 0.2vw;
     margin-bottom: 0.3vw;
 }
 
-
+.artifact_stat_talent_list_item{
+    font-family: genshin;
+    font-size: 0.8vw;
+    color: white;
+    padding-top: 0.3vw;
+    padding-left: 1.2vw;
+    margin-top: 0.6vw;
+}
 
 
 

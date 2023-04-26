@@ -60,7 +60,7 @@ function character_select(character)
                     let div4 = document.createElement("div");
                     div4.className="build_button_item";
                     div4.setAttribute("type","submit");
-                    div4.setAttribute("onclick",`build_detail_show('${num}', 0)`);
+                    div4.setAttribute("onclick",`build_detail_show('${x[0].name}','${num}', 0)`);
                     div4.innerHTML = `${x[0].build_type[num].built}`
                     document.getElementsByClassName("build_button")[0].appendChild(div4);
                 }
@@ -122,24 +122,61 @@ function character_select(character)
                 div14.innerHTML="Artifact Stat & Talent Order";
                 document.getElementsByClassName("artifact_stat_talent_list")[0].appendChild(div14);
 
+                for (let num in x[0].build_type[0]){
 
+                    if(num.includes("main_stat")){
+                        let div15 = document.createElement("div");
+                        div15.className="artifact_stat_talent_list_item";
+                        div15.innerHTML=`Sands: ${x[0].build_type[0][num][0]} <br>Goblet: ${x[0].build_type[0][num][1]} <br>Circlet: ${x[0].build_type[0][num][2]}`;
+                        document.getElementsByClassName("artifact_stat_talent_list")[0].appendChild(div15);
+                    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    if(num.includes("stat_priority")){
+                        let temp = 0;
+                        for(let num1 in x[0].build_type[0][num]){
+                            if(`${x[0].build_type[0][num][num1]}`=="")
+                                break;
+                            temp = num1;  
+                        }
+                        if(temp == 0){
+                            let div15 = document.createElement("div");
+                            div15.className="artifact_stat_talent_list_item";
+                            div15.innerHTML=`Sub Stat Priority: ${x[0].build_type[0][num][temp]}`;
+                            document.getElementsByClassName("artifact_stat_talent_list")[0].appendChild(div15);
+                        }
+                        else if(temp == 1){
+                            let div15 = document.createElement("div");
+                            div15.className="artifact_stat_talent_list_item";
+                            div15.innerHTML=`Sub Stat Priority: ${x[0].build_type[0][num][temp-1]} > ${x[0].build_type[0][num][temp]}`;
+                            document.getElementsByClassName("artifact_stat_talent_list")[0].appendChild(div15);
+                        }
+                        else if(temp == 2){
+                            let div15 = document.createElement("div");
+                            div15.className="artifact_stat_talent_list_item";
+                            div15.innerHTML=`Sub Stat Priority: ${x[0].build_type[0][num][temp-2]} > ${x[0].build_type[0][num][temp-1]} > ${x[0].build_type[0][num][temp]}`;
+                            document.getElementsByClassName("artifact_stat_talent_list")[0].appendChild(div15);
+                        }
+                        else if(temp == 3){
+                            let div15 = document.createElement("div");
+                            div15.className="artifact_stat_talent_list_item";
+                            div15.innerHTML=`Sub Stat Priority: ${x[0].build_type[0][num][temp-3]} > ${x[0].build_type[0][num][temp-2]} > ${x[0].build_type[0][num][temp-1]} > ${x[0].build_type[0][num][temp]}`;
+                            document.getElementsByClassName("artifact_stat_talent_list")[0].appendChild(div15);
+                        }
+                        else if(temp == 4){
+                            let div15 = document.createElement("div");
+                            div15.className="artifact_stat_talent_list_item";
+                            div15.innerHTML=`Sub Stat Priority: ${x[0].build_type[0][num][temp-4]} > ${x[0].build_type[0][num][temp-3]} > ${x[0].build_type[0][num][temp-2]} > ${x[0].build_type[0][num][temp-1]} > ${x[0].build_type[0][num][temp]}`;
+                            document.getElementsByClassName("artifact_stat_talent_list")[0].appendChild(div15);
+                        }
+                    }
+        
+                    if(num.includes("talent_order")){
+                        let div15 = document.createElement("div");
+                        div15.className="artifact_stat_talent_list_item";
+                        div15.innerHTML=`Talent Priority: ${x[0].build_type[0][num][0]} > ${x[0].build_type[0][num][1]} > ${x[0].build_type[0][num][2]}`;
+                        document.getElementsByClassName("artifact_stat_talent_list")[0].appendChild(div15);
+                    }                    
+                }
 
                 //CHARACTER IMAGE
                 let div20 = document.createElement("img");
@@ -185,6 +222,7 @@ function character_select(character)
             char_page_no = 2;
         }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         else if(char_page_no == 2)
         {
@@ -222,7 +260,7 @@ function character_select(character)
                     let div4 = document.createElement("div");
                     div4.className="build_button_item";
                     div4.setAttribute("type","submit");
-                    div4.setAttribute("onclick",`build_detail_show('${num}', 1)`);
+                    div4.setAttribute("onclick",`build_detail_show('${x[0].name}','${num}', 1)`);
                     div4.innerHTML = `${x[0].build_type[num].built}`
                     document.getElementsByClassName("build_button")[1].appendChild(div4);
                 }
@@ -284,24 +322,62 @@ function character_select(character)
                 div14.innerHTML="Artifact Stat & Talent Order";
                 document.getElementsByClassName("artifact_stat_talent_list")[1].appendChild(div14);
 
+                for (let num in x[0].build_type[0]){
 
+                    if(num.includes("main_stat")){
+                        let div15 = document.createElement("div");
+                        div15.className="artifact_stat_talent_list_item";
+                        div15.innerHTML=`Sands: ${x[0].build_type[0][num][0]} <br>Goblet: ${x[0].build_type[0][num][1]} <br>Circlet: ${x[0].build_type[0][num][2]}`;
+                        document.getElementsByClassName("artifact_stat_talent_list")[1].appendChild(div15);
+                    }
+
+                    if(num.includes("stat_priority")){
+                        let temp = 0;
+                        for(let num1 in x[0].build_type[0][num]){
+                            if(`${x[0].build_type[0][num][num1]}`=="")
+                                break;
+                            temp = num1;  
+                        }
+                        if(temp == 0){
+                            let div15 = document.createElement("div");
+                            div15.className="artifact_stat_talent_list_item";
+                            div15.innerHTML=`Sub Stat Priority: ${x[0].build_type[0][num][temp]}`;
+                            document.getElementsByClassName("artifact_stat_talent_list")[1].appendChild(div15);
+                        }
+                        else if(temp == 1){
+                            let div15 = document.createElement("div");
+                            div15.className="artifact_stat_talent_list_item";
+                            div15.innerHTML=`Sub Stat Priority: ${x[0].build_type[0][num][temp-1]} > ${x[0].build_type[0][num][temp]}`;
+                            document.getElementsByClassName("artifact_stat_talent_list")[1].appendChild(div15);
+                        }
+                        else if(temp == 2){
+                            let div15 = document.createElement("div");
+                            div15.className="artifact_stat_talent_list_item";
+                            div15.innerHTML=`Sub Stat Priority: ${x[0].build_type[0][num][temp-2]} > ${x[0].build_type[0][num][temp-1]} > ${x[0].build_type[0][num][temp]}`;
+                            document.getElementsByClassName("artifact_stat_talent_list")[1].appendChild(div15);
+                        }
+                        else if(temp == 3){
+                            let div15 = document.createElement("div");
+                            div15.className="artifact_stat_talent_list_item";
+                            div15.innerHTML=`Sub Stat Priority: ${x[0].build_type[0][num][temp-3]} > ${x[0].build_type[0][num][temp-2]} > ${x[0].build_type[0][num][temp-1]} > ${x[0].build_type[0][num][temp]}`;
+                            document.getElementsByClassName("artifact_stat_talent_list")[1].appendChild(div15);
+                        }
+                        else if(temp == 4){
+                            let div15 = document.createElement("div");
+                            div15.className="artifact_stat_talent_list_item";
+                            div15.innerHTML=`Sub Stat Priority: ${x[0].build_type[0][num][temp-4]} > ${x[0].build_type[0][num][temp-3]} > ${x[0].build_type[0][num][temp-2]} > ${x[0].build_type[0][num][temp-1]} > ${x[0].build_type[0][num][temp]}`;
+                            document.getElementsByClassName("artifact_stat_talent_list")[1].appendChild(div15);
+                        }
+                    }
+        
+                    if(num.includes("talent_order")){
+                        let div15 = document.createElement("div");
+                        div15.className="artifact_stat_talent_list_item";
+                        div15.innerHTML=`Talent Priority: ${x[0].build_type[0][num][0]} > ${x[0].build_type[0][num][1]} > ${x[0].build_type[0][num][2]}`;
+                        document.getElementsByClassName("artifact_stat_talent_list")[1].appendChild(div15);
+                    }                    
+                }
                     
-
-
-
-                
-                
-
-
-
-
-
-
-
-                
-
-
-
                 //CHARACTER IMAGE
                 let div20 = document.createElement("img");     
                 div20.className="character_image";
@@ -351,9 +427,76 @@ function character_select(character)
 
 
 //Build Detail Swapper
-function build_detail_show(num, num1){
+function build_detail_show(char_name ,build_no, set_no){
 
-    console.log(num, num1);
+    let myNode = document.getElementsByClassName("build_detail_text")[set_no];
+    myNode.remove();
+
+    myNode = document.getElementsByClassName("weapon_list")[set_no];
+        while (myNode.firstChild)
+            myNode.removeChild(myNode.lastChild);
+
+    myNode = document.getElementsByClassName("artifact_list")[set_no];
+        while (myNode.firstChild)
+            myNode.removeChild(myNode.lastChild);
+
+    myNode = document.getElementsByClassName("artifact_stat_talent_list")[set_no];
+        while (myNode.firstChild)
+            myNode.removeChild(myNode.lastChild);
+
+    fetch('./data/data.json')
+    .then(response => response.json())
+    .then(json => { 
+    let x = json.filter((item) => {return item.name == `${char_name}`;});
+
+    //BUILD DETAIL TEXT
+    let div6 = document.createElement("div");
+    div6.className="build_detail_text";
+    div6.innerHTML=`${x[0].build_type[build_no].built}`;
+    document.getElementsByClassName("build_detail")[set_no].appendChild(div6);
+
+    // WEAPON LIST
+    let div8 = document.createElement("div");
+    div8.className="weapon_list_text";
+    div8.innerHTML="Weapon";
+    document.getElementsByClassName("weapon_list")[set_no].appendChild(div8);
+
+    for (let num in x[0].build_type[build_no]){
+        let div9 = document.createElement("div");
+        div9.className="weapon_item";
+        if(num.includes("weapon")){
+            div9.innerHTML = `${x[0].build_type[build_no][num][0]}`;
+            document.getElementsByClassName("weapon_list")[set_no].appendChild(div9);
+        }
+    }
+
+    //ARTIFACT LIST                
+    let div11 = document.createElement("div");
+    div11.className="artifact_list_text";
+    div11.innerHTML="Artifacts";
+    document.getElementsByClassName("artifact_list")[set_no].appendChild(div11);
+
+    for (let num in x[0].build_type[build_no]){
+        let div12 = document.createElement("div");
+        div12.className="artifact_item";
+        if(num.includes("artifact")){
+            div12.innerHTML = `${x[0].build_type[build_no][num][0]}`;
+            document.getElementsByClassName("artifact_list")[set_no].appendChild(div12);
+        }
+    }
+
+
+
+
+
+
+
+
+    
+
+
+    });
+
 }
 
 
