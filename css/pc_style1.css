@@ -3,10 +3,6 @@
     padding: 0px;
 
     --dendro: linear-gradient(319deg, #7cc472 0%, #c5fabe 37%, #8ec287 100%);
-
-    --star5: linear-gradient(319deg, #d8a842 0%, #ddb765 37%, #e7c781 100%);
-    --star4: linear-gradient(319deg, #bc6bd4 0%, #a546bd 37%, #97229b 100%);
-    --star3: linear-gradient(319deg, #66a0cf 0%, #4c88b9 37%, #2288a7 100%);
 }
 
 ::-webkit-scrollbar {
@@ -102,14 +98,6 @@
     text-align: center;
 }
 
-.welcome_img{
-    position: absolute;
-    top: 8vh;
-    left: 8.5vw;
-    width: 45vw;
-    height: 45vh;
-}
-
 .welcome_text:hover{
     cursor: default;
 }
@@ -180,12 +168,6 @@
     position: relative;
     top: 5.5vw;   
 }
-
-
-
-
-/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-
 
 
 
@@ -424,132 +406,127 @@
 
     position: absolute;
 
-    margin-top: 0.22vh;
+    margin-top: 0.2vh;
     margin-left: 0.4vw;
-}
-
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-
-.weapon_list_text{
-    position: absolute;
-    top: 4vh;
-
-    font-family: genshin;
-    font-size: 0.8vw;
-    color: white;
-
-    margin-top: 0.22vh;
-    margin-left: 0.2vw;
 }
 
 .weapon_list{
     display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
+    flex-direction: column;
+    background-color: rgba(56, 56, 56, 0.582);
 
     position: absolute;
-    top: 6.5vh;
+    top: 5.5vh;
     left: 0vw;
- 
-    height: auto;
+    width: 60vw;
+    height: 31vh;
 
-    background-color: rgba(56, 56, 56, 0.582);
     border-radius: 6px;
 }
 
-.weapon_list_item{
-    display: flex;
-    flex-direction: column;
-    
-
-    width: 4.61vw;
-    height: 9.7vh;
-
-    margin: 7.8px;
-    padding-left: 1px;
-    border-radius: 6px;
-}
-
-.weapon_list_item_img{
-    width: 4.7vw;
-    height: auto;
-}
-
-.weapon_name{
+.weapon_list_text{
     font-family: genshin;
-    font-size: 0.6vw;
+    font-size: 1vw;
     color: white;
-    text-align: center;
-
-    border-radius: 3px;
-    background-color: rgba(0, 0, 0, 0.815);
-    backdrop-filter: blur(6px);
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-    
-    padding-inline: 2px;
-    opacity: 0;
-    transition: opacity ease-in-out 0.2s;
+    padding-top: 0.2vw;
+    padding-left: 0.2vw;
+    margin-bottom: 0.3vw;
 }
 
-.weapon_list_item:hover .weapon_name{
+.weapon_item{
+    font-family: genshin;
+    font-size: 0.8vw;
+    color: white;
+    padding-top: 0.2vw;
+    padding-left: 1.2vw;
+}
+
+.weapon_item_image{
+    display: flex;
+    flex-direction: row;
+
+    position: absolute;
+    left:30vw;
+    top: 1.5vh;
+
+    width: 25vh;
+    height: 14vw;
+    
+    opacity: 0;
+    transition: ease-in-out 0.3s;
+    background-color: #4242420e;
+}
+
+.weapon_item:hover{
+    text-decoration: underline;
+}
+
+.weapon_item:hover .weapon_item_image{
     opacity: 1;
 }
 
+.artifact_list{
+    display:flex;
+    flex-direction: column;
+    background-color: rgba(56, 56, 56, 0.582);
 
+    position: absolute;
+    top: 40vh;
+    left: 0vw;
+    width: 60vw;
+    height: 20vh;
 
+    border-radius: 6px;
+}
 
+.artifact_list_text{
+    font-family: genshin;
+    font-size: 1vw;
+    color: white;
+    padding-top: 0.2vw;
+    padding-left: 0.2vw;
+    margin-bottom: 0.3vw;
+}
 
+.artifact_item{
+    font-family: genshin;
+    font-size: 0.8vw;
+    color: white;
+    padding-top: 0.5vw;
+    padding-left: 1.2vw;
+}
 
+.artifact_stat_talent_list{
+    display:flex;
+    flex-direction: column;
+    background-color: rgba(56, 56, 56, 0.582);
 
+    position: absolute;
+    top: 63vh;
+    left: 0vw;
+    width: 55vw;
+    height: 20vh;
 
+    border-radius: 6px;
+}
 
+.artifact_stat_talent_list_text{
+    font-family: genshin;
+    font-size: 0.8vw;
+    color: white;
+    padding-top: 0.2vw;
+    padding-left: 0.2vw;
+    margin-bottom: 0.3vw;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.artifact_stat_talent_list_item{
+    font-family: genshin;
+    font-size: 0.8vw;
+    color: white;
+    padding-top: 0.3vw;
+    padding-left: 1.2vw;
+    margin-top: 0.6vw;
+}
 
 
 
