@@ -55,13 +55,13 @@ function character_select(character)
                 let div3 = document.createElement("div");
                 div3.className="build_button";
                 document.getElementsByClassName("character_details_set_1")[0].appendChild(div3);
-
+                
                 for (let num in x[0].build_type){
                     let div4 = document.createElement("div");
                     div4.className="build_button_item";
                     div4.setAttribute("type","submit");
                     div4.setAttribute("onclick",`build_detail_show('${x[0].name}','${num}', 0)`);
-                    div4.innerHTML = `${x[0].build_type[num].built}`
+                    div4.innerHTML = `${x[0].build_type[num].built}`;
                     document.getElementsByClassName("build_button")[0].appendChild(div4);
                 }
 
@@ -70,13 +70,9 @@ function character_select(character)
                 document.getElementsByClassName("character_details_set_1")[0].appendChild(div5);
 
 
+
                 //WEAPON LIST
                 let div6 = document.createElement("div");
-                div6.className="build_detail_text";
-                div6.innerHTML=`${x[0].build_type[0].built}`;
-                document.getElementsByClassName("build_detail")[0].appendChild(div6);
-
-                div6 = document.createElement("div");
                 div6.className="weapon_list_text";
                 div6.innerHTML="Weapons";
                 document.getElementsByClassName("build_detail")[0].appendChild(div6);
@@ -94,6 +90,11 @@ function character_select(character)
                             div6.className="weapon_list_item";          
                             document.getElementsByClassName("weapon_list")[0].appendChild(div6);
 
+                            div6 = document.createElement("div");
+                            div6.className="weapon_number";
+                            div6.innerHTML=weapon_count+1;  
+                            document.getElementsByClassName("weapon_list_item")[weapon_count].appendChild(div6);
+
                             div6 = document.createElement("img");
                             div6.className="weapon_list_item_img";  
                             div6.setAttribute("src",`${x[0].build_type[0][num][1]}`);
@@ -106,7 +107,7 @@ function character_select(character)
                             else if(weapon_quality.includes('(3☆'))
                                 div6.style.backgroundImage='var(--star3)';
                             document.getElementsByClassName("weapon_list_item")[weapon_count].appendChild(div6);
-
+                                
                             div6 = document.createElement("span");
                             div6.className="weapon_name";
                             div6.innerHTML=`${x[0].build_type[0][num][0]}`;
@@ -115,7 +116,7 @@ function character_select(character)
                             weapon_count++;
                             if(weapon_count == 6){
                                 var ele=document.getElementsByClassName("weapon_list")[0];
-                                ele.style.width = "27.6vw";
+                                ele.style.width = "28.8vw";
                             }
                         }
                         else{
@@ -127,27 +128,105 @@ function character_select(character)
                             div6.style.margin="0px";    
                             document.getElementsByClassName("weapon_list")[0].appendChild(div6);
                         }
-                }            
+                }         
+                
+                
+                // ARTIFACT LIST
+                div6 = document.createElement("div");
+                div6.className="artifact_list_text";
+                div6.innerHTML="Artifacts";
+                document.getElementsByClassName("build_detail")[0].appendChild(div6);
+
+                div6 = document.createElement("div");
+                div6.className="artifact_list";
+                document.getElementsByClassName("build_detail")[0].appendChild(div6);
                 
                 let artifact_count = 0;
                 for(let num in x[0].build_type[0]){
                     if(num.includes('artifact')){
+                        if(x[0].build_type[0][num][0] != ""){
+
+                            let artifact_length = x[0].build_type[0][num].length;
+
+                            if(artifact_length == 2){
+
+                                div6 = document.createElement("div");
+                                div6.className="artifact_list_item";
+                                document.getElementsByClassName("artifact_list")[0].appendChild(div6);
+
+                                div6 = document.createElement("img");
+                                div6.className="artifact_list_item_img";
+                                div6.setAttribute("src",`${x[0].build_type[0][num][1]}`);
+                                div6.style.backgroundImage='var(--artifact_bg)';
+                                document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
+
+                                div6 = document.createElement("div");
+                                div6.className="artifact_number";
+                                div6.innerHTML='4';
+                                document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
+
+                                div6 = document.createElement("span");
+                                div6.className="artifact_name";
+                                div6.innerHTML=`${x[0].build_type[0][num][0]}`;
+                                document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
 
 
+                                artifact_count++;
+                            }
+
+                            else if(artifact_length == 3){
+                                div6 = document.createElement("div");
+                                div6.className="artifact_list_item";
+                                document.getElementsByClassName("artifact_list")[0].appendChild(div6);
+
+                                div6 = document.createElement("img");
+                                div6.className="artifact_list_item_img";
+                                div6.setAttribute("src",`${x[0].build_type[0][num][1]}`);
+                                div6.style.backgroundImage='var(--artifact_bg)';
+                                document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
+
+                                div6 = document.createElement("img");
+                                div6.className="artifact_list_item_img";
+                                div6.setAttribute("src",`${x[0].build_type[0][num][2]}`);
+                                div6.style.backgroundImage='var(--artifact_bg)';
+                                document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
+
+                                div6 = document.createElement("div");
+                                div6.className="artifact_number";
+                                div6.innerHTML='2';
+                                document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
+
+                                div6 = document.createElement("div");
+                                div6.className="artifact_number";
+                                div6.innerHTML='2';
+                                div6.style.left='4.1vw';
+                                document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
+
+                                div6 = document.createElement("span");
+                                div6.className="artifact_name";
+                                div6.style.left='0.5vw';
+                                div6.innerHTML=`${x[0].build_type[0][num][0]}`;
+                                document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
 
 
+                                artifact_count++;
+                            }
+                        }
 
+                        else{
+                            div6 = document.createElement("div");
+                            div6.className="artifact_list_item";
+                            div6.style.margin='0px';
+                            div6.style.padding='0px';
+                            document.getElementsByClassName("artifact_list")[0].appendChild(div6);
 
-
-
-
-                        
-
+                            artifact_count++;
+                        }
 
                     }
                 }
 
-
+                console.log(artifact_count);
 
 
 
@@ -252,13 +331,9 @@ function character_select(character)
                 div5.className="build_detail";
                 document.getElementsByClassName("character_details_set_1")[1].appendChild(div5);
 
+
                 //WEAPON LIST
                 let div6 = document.createElement("div");
-                div6.className="build_detail_text";
-                div6.innerHTML=`${x[0].build_type[0].built}`;
-                document.getElementsByClassName("build_detail")[1].appendChild(div6);
-
-                div6 = document.createElement("div");
                 div6.className="weapon_list_text";
                 div6.innerHTML="Weapons";
                 document.getElementsByClassName("build_detail")[1].appendChild(div6);
@@ -275,6 +350,11 @@ function character_select(character)
                             div6 = document.createElement("div");
                             div6.className="weapon_list_item";          
                             document.getElementsByClassName("weapon_list")[1].appendChild(div6);
+
+                            div6 = document.createElement("div");
+                            div6.className="weapon_number";
+                            div6.innerHTML=weapon_count-9;  
+                            document.getElementsByClassName("weapon_list_item")[weapon_count].appendChild(div6);
 
                             div6 = document.createElement("img");
                             div6.className="weapon_list_item_img";  
@@ -298,7 +378,7 @@ function character_select(character)
                             weapon_count++;
                             if(weapon_count == 16){
                                 var ele=document.getElementsByClassName("weapon_list")[1];
-                                ele.style.width = "27.6vw";
+                                ele.style.width = "28.8vw";
                             }
                         }
                         else{
@@ -310,6 +390,101 @@ function character_select(character)
                             div6.style.margin="0px";        
                             document.getElementsByClassName("weapon_list")[1].appendChild(div6);
                         }
+                }
+
+
+                // ARTIFACT LIST
+                div6 = document.createElement("div");
+                div6.className="artifact_list_text";
+                div6.innerHTML="Artifacts";
+                document.getElementsByClassName("build_detail")[1].appendChild(div6);
+
+                div6 = document.createElement("div");
+                div6.className="artifact_list";
+                document.getElementsByClassName("build_detail")[1].appendChild(div6);
+                
+                let artifact_count = 5;
+                for(let num in x[0].build_type[0]){
+                    if(num.includes('artifact')){
+                        if(x[0].build_type[0][num][0] != ""){
+
+                            let artifact_length = x[0].build_type[0][num].length;
+
+                            if(artifact_length == 2){
+
+                                div6 = document.createElement("div");
+                                div6.className="artifact_list_item";
+                                document.getElementsByClassName("artifact_list")[1].appendChild(div6);
+
+                                div6 = document.createElement("img");
+                                div6.className="artifact_list_item_img";
+                                div6.setAttribute("src",`${x[0].build_type[0][num][1]}`);
+                                div6.style.backgroundImage='var(--artifact_bg)';
+                                document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
+
+                                div6 = document.createElement("div");
+                                div6.className="artifact_number";
+                                div6.innerHTML='4';
+                                document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
+
+                                div6 = document.createElement("span");
+                                div6.className="artifact_name";
+                                div6.innerHTML=`${x[0].build_type[0][num][0]}`;
+                                document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
+
+
+                                artifact_count++;
+                            }
+
+                            else if(artifact_length == 3){
+                                div6 = document.createElement("div");
+                                div6.className="artifact_list_item";
+                                document.getElementsByClassName("artifact_list")[1].appendChild(div6);
+
+                                div6 = document.createElement("img");
+                                div6.className="artifact_list_item_img";
+                                div6.setAttribute("src",`${x[0].build_type[0][num][1]}`);
+                                div6.style.backgroundImage='var(--artifact_bg)';
+                                document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
+
+                                div6 = document.createElement("img");
+                                div6.className="artifact_list_item_img";
+                                div6.setAttribute("src",`${x[0].build_type[0][num][2]}`);
+                                div6.style.backgroundImage='var(--artifact_bg)';
+                                document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
+
+                                div6 = document.createElement("div");
+                                div6.className="artifact_number";
+                                div6.innerHTML='2';
+                                document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
+
+                                div6 = document.createElement("div");
+                                div6.className="artifact_number";
+                                div6.innerHTML='2';
+                                div6.style.left='4.1vw';
+                                document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
+
+                                div6 = document.createElement("span");
+                                div6.className="artifact_name";
+                                div6.style.left='0.5vw';
+                                div6.innerHTML=`${x[0].build_type[0][num][0]}`;
+                                document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
+
+                                artifact_count++;
+                            }
+                        }
+
+                        else{
+                            div6 = document.createElement("div");
+                            div6.className="artifact_list_item";
+                            div6.style.margin='0px';
+                            div6.style.padding='0px';
+                            document.getElementsByClassName("artifact_list")[1].appendChild(div6);
+
+                            artifact_count++;
+                        }
+
+                    }
                 }
 
                 

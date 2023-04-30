@@ -2,6 +2,10 @@
     margin: 0px;
     padding: 0px;
 
+    --selection: linear-gradient(90deg, rgba(24,36,0,1) 0%, rgba(9,9,121,1) 37%, rgba(0,212,255,1) 90%);
+
+    --artifact_bg: linear-gradient(142deg, rgba(117,172,144,1) 39%, rgba(109,161,193,1) 71%);
+
     --dendro: linear-gradient(319deg, #7cc472 0%, #c5fabe 37%, #8ec287 100%);
 
     --star5: linear-gradient(319deg, #d8a842 0%, #ddb765 37%, #e7c781 100%);
@@ -432,7 +436,7 @@
 
 .weapon_list_text{
     position: absolute;
-    top: 4vh;
+    top: 0.5vh;
 
     font-family: genshin;
     font-size: 0.8vw;
@@ -449,31 +453,34 @@
     align-content: flex-start;
 
     position: absolute;
-    top: 6.5vh;
+    top: 3vh;
     left: 0vw;
- 
+
+    /* width: 28.6vw; */
     height: auto;
 
     background-color: rgba(56, 56, 56, 0.582);
-    border-radius: 6px;
+    border-radius: 8px;
 }
 
 .weapon_list_item{
     display: flex;
     flex-direction: column;
     
-
     width: 4.61vw;
     height: 9.7vh;
 
-    margin: 7.8px;
-    padding-left: 1px;
-    border-radius: 6px;
+    margin: 0.5vw;
+    padding: 0.025vw;
+    border-radius: 8px;
 }
 
 .weapon_list_item_img{
-    width: 4.7vw;
+    width: 4.61vw;
     height: auto;
+
+    margin: 0.52vh 0 0 0.3vw;
+    border-radius: 8px;
 }
 
 .weapon_name{
@@ -487,25 +494,134 @@
     backdrop-filter: blur(6px);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
     
-    padding-inline: 2px;
+    margin-left: 0.22vw;
+    width: 4.7vw;
+
+    padding-inline: 1px;
     opacity: 0;
     transition: opacity ease-in-out 0.2s;
 }
 
+.weapon_number{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    width: 0.8vw;
+    
+    font-family: genshin;
+    font-size: 0.6vw;
+    color: white;
+    padding: 5px;
+
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+}
+
 .weapon_list_item:hover .weapon_name{
     opacity: 1;
+    z-index: 100;
 }
 
 
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 
+.artifact_list_text{
+    position: absolute;
+    top: 27.5vh;
 
+    font-family: genshin;
+    font-size: 0.8vw;
+    color: white;
 
+    margin-top: 0.22vh;
+    margin-left: 0.2vw;
+}
 
+.artifact_list{
+    display:flex;
+    flex-direction: column;
 
+    position: absolute;
+    top: 30vh;
+    left: 0vw;
 
+    width: 28.6vw;
+    height: auto;
 
+    background-color: rgba(56, 56, 56, 0.582);
+    border-radius: 6px;
+}
 
+.artifact_list_item{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    
+    width: 27vw;
+    height: auto;
+
+    margin: 0.5vw;
+    padding: 0.025vw;
+    border-radius: 8px;
+
+}
+
+.artifact_list_item_img{
+    width: 3vw;
+    height: auto;
+
+    margin: 0 1vh 0.3vw 0;
+    border-radius: 8px;
+}
+
+.artifact_number{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    margin-top: 4vh;
+    margin-left: 2.2vw;
+
+    width: 0.6vw;
+    height: 0.6vw;
+
+    font-family: genshin;
+    font-size: 0.55vw;
+    color: white;
+    padding: 4px;
+
+    background-color: rgb(236, 82, 82);
+    border-radius: 50%;
+}
+
+.artifact_name{
+    position: absolute;
+    font-family: genshin;
+    font-size: 0.6vw;
+    color: white;
+
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.815);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+
+    text-align: center;
+    
+    margin-top: 2.2vh;
+    margin-left: 8.5vw;
+
+    padding: 3px;
+
+    width: auto;
+
+    border-radius: 6px;
+    padding-inline: 5px;
+    transition: opacity ease-in-out 0.2s;
+}
 
 
 
