@@ -14,8 +14,8 @@
 }
 
 ::-webkit-scrollbar {
-    height: 1px;
-    width: 1px;
+    height: 0.1px;
+    width: 0.1px;
 }
 
 @font-face { 
@@ -225,6 +225,13 @@
     height: 94.5vh;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.charcter_scroller::-webkit-scrollbar {
+  display: none;    /* Hide scrollbar for Chrome, Safari and Opera */
 }
 
 .charcter_scroller_item{

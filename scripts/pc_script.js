@@ -69,8 +69,6 @@ function character_select(character)
                 div5.className="build_detail";
                 document.getElementsByClassName("character_details_set_1")[0].appendChild(div5);
 
-
-
                 //WEAPON LIST
                 let div6 = document.createElement("div");
                 div6.className="weapon_list_text";
@@ -145,7 +143,6 @@ function character_select(character)
                 for(let num in x[0].build_type[0]){
                     if(num.includes('artifact')){
                         if(x[0].build_type[0][num][0] != ""){
-
                             let artifact_length = x[0].build_type[0][num].length;
 
                             if(artifact_length == 2){
@@ -170,10 +167,8 @@ function character_select(character)
                                 div6.innerHTML=`${x[0].build_type[0][num][0]}`;
                                 document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
 
-
                                 artifact_count++;
                             }
-
                             else if(artifact_length == 3){
                                 div6 = document.createElement("div");
                                 div6.className="artifact_list_item";
@@ -208,11 +203,9 @@ function character_select(character)
                                 div6.innerHTML=`${x[0].build_type[0][num][0]}`;
                                 document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
 
-
                                 artifact_count++;
                             }
                         }
-
                         else{
                             div6 = document.createElement("div");
                             div6.className="artifact_list_item";
@@ -222,11 +215,8 @@ function character_select(character)
 
                             artifact_count++;
                         }
-
                     }
                 }
-
-                console.log(artifact_count);
 
 
 
@@ -407,7 +397,6 @@ function character_select(character)
                 for(let num in x[0].build_type[0]){
                     if(num.includes('artifact')){
                         if(x[0].build_type[0][num][0] != ""){
-
                             let artifact_length = x[0].build_type[0][num].length;
 
                             if(artifact_length == 2){
@@ -432,10 +421,8 @@ function character_select(character)
                                 div6.innerHTML=`${x[0].build_type[0][num][0]}`;
                                 document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
 
-
                                 artifact_count++;
                             }
-
                             else if(artifact_length == 3){
                                 div6 = document.createElement("div");
                                 div6.className="artifact_list_item";
@@ -473,7 +460,6 @@ function character_select(character)
                                 artifact_count++;
                             }
                         }
-
                         else{
                             div6 = document.createElement("div");
                             div6.className="artifact_list_item";
@@ -483,7 +469,6 @@ function character_select(character)
 
                             artifact_count++;
                         }
-
                     }
                 }
 
