@@ -56,20 +56,24 @@ function character_select(character)
                 div3.className="build_button";
                 document.getElementsByClassName("character_details_set_1")[0].appendChild(div3);
                 
+                let button_select = 0;
                 for (let num in x[0].build_type){
                     let div4 = document.createElement("div");
                     div4.className="build_button_item";
                     div4.setAttribute("type","submit");
                     div4.setAttribute("onclick",`build_detail_show('${x[0].name}','${num}', 0)`);
                     div4.innerHTML = `${x[0].build_type[num].built}`;
+                    if(button_select == 0)
+                        div4.style.backgroundImage = 'var(--selection)';
                     document.getElementsByClassName("build_button")[0].appendChild(div4);
+                    button_select++;
                 }
 
                 let div5 = document.createElement("div");
                 div5.className="build_detail";
                 document.getElementsByClassName("character_details_set_1")[0].appendChild(div5);
 
-                //WEAPON LIST
+                // WEAPON LIST
                 let div6 = document.createElement("div");
                 div6.className="weapon_list_text";
                 div6.innerHTML="Weapons";
@@ -162,7 +166,7 @@ function character_select(character)
                                 div6.innerHTML='4';
                                 document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
 
-                                div6 = document.createElement("span");
+                                div6 = document.createElement("div");
                                 div6.className="artifact_name";
                                 div6.innerHTML=`${x[0].build_type[0][num][0]}`;
                                 document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
@@ -197,7 +201,7 @@ function character_select(character)
                                 div6.style.left='4.1vw';
                                 document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
 
-                                div6 = document.createElement("span");
+                                div6 = document.createElement("div");
                                 div6.className="artifact_name";
                                 div6.style.left='0.5vw';
                                 div6.innerHTML=`${x[0].build_type[0][num][0]}`;
@@ -218,12 +222,136 @@ function character_select(character)
                     }
                 }
 
+                //ARTIFACT & SUB STAT DETAILS LIST
+                div6 = document.createElement("div");
+                div6.className="sub_stat_list_text";
+                div6.innerHTML="Artifact & Sub Stats Details"
+                document.getElementsByClassName("build_detail")[0].appendChild(div6);
+
+                div6 = document.createElement("div");
+                div6.className="sub_stat_list";
+                document.getElementsByClassName("build_detail")[0].appendChild(div6);
+
+                for(let num in x[0].build_type[0]){
+                    if(num.includes('main_stat')){
+                        //SANDS
+                        div6 = document.createElement("div");
+                        div6.className="sub_artifact_detail";
+                        document.getElementsByClassName("sub_stat_list")[0].appendChild(div6);
+
+                        div6 = document.createElement("img");
+                        div6.className="sub_artifact_img";
+                        div6.setAttribute("src",`./Images/Artifact_Icon/Sands_of_Eon.webp`);
+                        document.getElementsByClassName("sub_artifact_detail")[0].appendChild(div6);
+
+                        div6 = document.createElement("div");
+                        div6.className="sub_artifact_text";
+                        div6.innerHTML=`: ${x[0].build_type[0][num][0]}`;
+                        document.getElementsByClassName("sub_artifact_detail")[0].appendChild(div6);
+
+                        div6 = document.createElement("span");
+                        div6.className="artifact_logo_name";
+                        div6.innerHTML="Sands of Eon";
+                        document.getElementsByClassName("sub_artifact_detail")[0].appendChild(div6);
+
+                        //GOBLET
+                        div6 = document.createElement("div");
+                        div6.className="sub_artifact_detail";
+                        div6.style.top='5vh';
+                        document.getElementsByClassName("sub_stat_list")[0].appendChild(div6);
+
+                        div6 = document.createElement("img");
+                        div6.className="sub_artifact_img";
+                        div6.setAttribute("src",`./Images/Artifact_Icon/Goblet_of_Eonothem.webp`);
+                        document.getElementsByClassName("sub_artifact_detail")[1].appendChild(div6);
+
+                        div6 = document.createElement("div");
+                        div6.className="sub_artifact_text";
+                        div6.innerHTML=`: ${x[0].build_type[0][num][1]}`;
+                        document.getElementsByClassName("sub_artifact_detail")[1].appendChild(div6);
+
+                        div6 = document.createElement("span");
+                        div6.className="artifact_logo_name";
+                        div6.innerHTML="Goblet of Enothem";
+                        document.getElementsByClassName("sub_artifact_detail")[1].appendChild(div6);
+
+                        //CIRCLET
+                        div6 = document.createElement("div");
+                        div6.className="sub_artifact_detail";
+                        div6.style.top='10vh';
+                        document.getElementsByClassName("sub_stat_list")[0].appendChild(div6);
+
+                        div6 = document.createElement("img");
+                        div6.className="sub_artifact_img";
+                        div6.setAttribute("src",`./Images/Artifact_Icon/Circlet_of_Logos.webp`);
+                        document.getElementsByClassName("sub_artifact_detail")[2].appendChild(div6);
+
+                        div6 = document.createElement("div");
+                        div6.className="sub_artifact_text";
+                        div6.innerHTML=`: ${x[0].build_type[0][num][2]}`;
+                        document.getElementsByClassName("sub_artifact_detail")[2].appendChild(div6);
+
+                        div6 = document.createElement("span");
+                        div6.className="artifact_logo_name";
+                        div6.innerHTML="Circlet of Logos";
+                        document.getElementsByClassName("sub_artifact_detail")[2].appendChild(div6);
+                    }
+
+                    else if(num.includes('stat_priority')){
+                        div6 = document.createElement("div");
+                        div6.className="sub_stat_priority";
+                        div6.innerHTML="Sub Stat Priority";
+                        document.getElementsByClassName("sub_stat_list")[0].appendChild(div6);
+
+                        for(i=0 ; i< x[0].build_type[0][num].length ; i++){
+                            if(x[0].build_type[0][num][i] != ""){
+                                div6 = document.createElement("div");
+                                div6.className="sub_stat_priority_text";
+                                div6.innerHTML=`${i+1}) ${x[0].build_type[0][num][i]}`;
+                                document.getElementsByClassName("sub_stat_priority")[0].appendChild(div6);
+                            }
+                        }
+                    }
+
+                    else if(num.includes('talent_order')){
+
+                        div6 = document.createElement("div");
+                        div6.className="talent_list_text";
+                        div6.innerHTML="Talent Order";
+                        document.getElementsByClassName("build_detail")[0].appendChild(div6);
+
+                        div6 = document.createElement("div");
+                        div6.className="talent_priority_list";
+                        document.getElementsByClassName("build_detail")[0].appendChild(div6);
+
+                        div6 = document.createElement("div");
+                        div6.className="talent_priority_item";
+                        div6.innerHTML=`${x[0].build_type[0][num][0]}`;
+                        document.getElementsByClassName("talent_priority_list")[0].appendChild(div6);
+
+                        div6 = document.createElement("div");
+                        div6.className="talent_priority_item_separator";
+                        div6.innerHTML=" >  ";
+                        document.getElementsByClassName("talent_priority_list")[0].appendChild(div6);
+
+                        div6 = document.createElement("div");
+                        div6.className="talent_priority_item";
+                        div6.innerHTML=`${x[0].build_type[0][num][1]}`;
+                        document.getElementsByClassName("talent_priority_list")[0].appendChild(div6);
+
+                        div6 = document.createElement("div");
+                        div6.className="talent_priority_item_separator";
+                        div6.innerHTML=" >  ";
+                        document.getElementsByClassName("talent_priority_list")[0].appendChild(div6);
+
+                        div6 = document.createElement("div");
+                        div6.className="talent_priority_item";
+                        div6.innerHTML=`${x[0].build_type[0][num][2]}`;
+                        document.getElementsByClassName("talent_priority_list")[0].appendChild(div6);
 
 
-
-
-
-
+                    }
+                }
 
 
 
@@ -308,13 +436,17 @@ function character_select(character)
                 div3.className="build_button";
                 document.getElementsByClassName("character_details_set_1")[1].appendChild(div3);
 
+                let button_select = 0;
                 for (let num in x[0].build_type){
                     let div4 = document.createElement("div");
                     div4.className="build_button_item";
                     div4.setAttribute("type","submit");
                     div4.setAttribute("onclick",`build_detail_show('${x[0].name}','${num}', 1)`);
-                    div4.innerHTML = `${x[0].build_type[num].built}`
+                    div4.innerHTML = `${x[0].build_type[num].built}`;
+                    if(button_select == 0)
+                        div4.style.backgroundImage = 'var(--selection)';
                     document.getElementsByClassName("build_button")[1].appendChild(div4);
+                    button_select++;
                 }
 
                 let div5 = document.createElement("div");
@@ -472,23 +604,136 @@ function character_select(character)
                     }
                 }
 
+                //ARTIFACT & SUB STAT DETAILS LIST
+                div6 = document.createElement("div");
+                div6.className="sub_stat_list_text";
+                div6.innerHTML="Artifact & Sub Stats Details"
+                document.getElementsByClassName("build_detail")[1].appendChild(div6);
+
+                div6 = document.createElement("div");
+                div6.className="sub_stat_list";
+                document.getElementsByClassName("build_detail")[1].appendChild(div6);
+
+                for(let num in x[0].build_type[0]){
+                    if(num.includes('main_stat')){
+                        //SANDS
+                        div6 = document.createElement("div");
+                        div6.className="sub_artifact_detail";
+                        document.getElementsByClassName("sub_stat_list")[1].appendChild(div6);
+
+                        div6 = document.createElement("img");
+                        div6.className="sub_artifact_img";
+                        div6.setAttribute("src",`./Images/Artifact_Icon/Sands_of_Eon.webp`);
+                        document.getElementsByClassName("sub_artifact_detail")[3].appendChild(div6);
+
+                        div6 = document.createElement("div");
+                        div6.className="sub_artifact_text";
+                        div6.innerHTML=`: ${x[0].build_type[0][num][0]}`;
+                        document.getElementsByClassName("sub_artifact_detail")[3].appendChild(div6);
+
+                        div6 = document.createElement("span");
+                        div6.className="artifact_logo_name";
+                        div6.innerHTML="Sands of Eon";
+                        document.getElementsByClassName("sub_artifact_detail")[3].appendChild(div6);
+
+                        //GOBLET
+                        div6 = document.createElement("div");
+                        div6.className="sub_artifact_detail";
+                        div6.style.top='5vh';
+                        document.getElementsByClassName("sub_stat_list")[1].appendChild(div6);
+
+                        div6 = document.createElement("img");
+                        div6.className="sub_artifact_img";
+                        div6.setAttribute("src",`./Images/Artifact_Icon/Goblet_of_Eonothem.webp`);
+                        document.getElementsByClassName("sub_artifact_detail")[4].appendChild(div6);
+
+                        div6 = document.createElement("div");
+                        div6.className="sub_artifact_text";
+                        div6.innerHTML=`: ${x[0].build_type[0][num][1]}`;
+                        document.getElementsByClassName("sub_artifact_detail")[4].appendChild(div6);
+
+                        div6 = document.createElement("span");
+                        div6.className="artifact_logo_name";
+                        div6.innerHTML="Goblet of Enothem";
+                        document.getElementsByClassName("sub_artifact_detail")[4].appendChild(div6);
+
+                        //CIRCLET
+                        div6 = document.createElement("div");
+                        div6.className="sub_artifact_detail";
+                        div6.style.top='10vh';
+                        document.getElementsByClassName("sub_stat_list")[1].appendChild(div6);
+
+                        div6 = document.createElement("img");
+                        div6.className="sub_artifact_img";
+                        div6.setAttribute("src",`./Images/Artifact_Icon/Circlet_of_Logos.webp`);
+                        document.getElementsByClassName("sub_artifact_detail")[5].appendChild(div6);
+
+                        div6 = document.createElement("div");
+                        div6.className="sub_artifact_text";
+                        div6.innerHTML=`: ${x[0].build_type[0][num][2]}`;
+                        document.getElementsByClassName("sub_artifact_detail")[5].appendChild(div6);
+
+                        div6 = document.createElement("span");
+                        div6.className="artifact_logo_name";
+                        div6.innerHTML="Circlet of Logos";
+                        document.getElementsByClassName("sub_artifact_detail")[5].appendChild(div6);
+                    }
+                    else if(num.includes('stat_priority')){
+                        div6 = document.createElement("div");
+                        div6.className="sub_stat_priority";
+                        div6.innerHTML="Sub Stat Priority";
+                        document.getElementsByClassName("sub_stat_list")[1].appendChild(div6);
+
+                        for(i=0 ; i< x[0].build_type[0][num].length ; i++){
+                            if(x[0].build_type[0][num][i] != ""){
+                                div6 = document.createElement("div");
+                                div6.className="sub_stat_priority_text";
+                                div6.innerHTML=`${i+1}) ${x[0].build_type[0][num][i]}`;
+                                document.getElementsByClassName("sub_stat_priority")[1].appendChild(div6);
+                            }
+                        }
+                    }
+                    else if(num.includes('talent_order')){
+
+                        div6 = document.createElement("div");
+                        div6.className="talent_list_text";
+                        div6.innerHTML="Talent Order";
+                        document.getElementsByClassName("build_detail")[1].appendChild(div6);
+
+                        div6 = document.createElement("div");
+                        div6.className="talent_priority_list";
+                        document.getElementsByClassName("build_detail")[1].appendChild(div6);
+
+                        div6 = document.createElement("div");
+                        div6.className="talent_priority_item";
+                        div6.innerHTML=`${x[0].build_type[0][num][0]}`;
+                        document.getElementsByClassName("talent_priority_list")[1].appendChild(div6);
+
+                        div6 = document.createElement("div");
+                        div6.className="talent_priority_item_separator";
+                        div6.innerHTML=" >  ";
+                        document.getElementsByClassName("talent_priority_list")[1].appendChild(div6);
+
+                        div6 = document.createElement("div");
+                        div6.className="talent_priority_item";
+                        div6.innerHTML=`${x[0].build_type[0][num][1]}`;
+                        document.getElementsByClassName("talent_priority_list")[1].appendChild(div6);
+
+                        div6 = document.createElement("div");
+                        div6.className="talent_priority_item_separator";
+                        div6.innerHTML=" >  ";
+                        document.getElementsByClassName("talent_priority_list")[1].appendChild(div6);
+
+                        div6 = document.createElement("div");
+                        div6.className="talent_priority_item";
+                        div6.innerHTML=`${x[0].build_type[0][num][2]}`;
+                        document.getElementsByClassName("talent_priority_list")[1].appendChild(div6);
+
+                    }
+                }
                 
 
                 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
                     
@@ -542,12 +787,321 @@ function character_select(character)
 
 //Build Detail Swapper
 function build_detail_show(char_name ,build_no, set_no){
+    // console.log(char_name ,build_no, set_no);
 
-    
+    fetch('./data/data.json')
+    .then(response => response.json())
+    .then(json => { 
+        let x = json.filter((item) => {return item.name == char_name});
+
+        let myNode = document.getElementsByClassName("build_button")[set_no];
+        while (myNode.firstChild)
+            myNode.removeChild(myNode.lastChild);
+
+        let button_select = 0;
+        for (let num in x[0].build_type){
+            let div4 = document.createElement("div");
+            div4.className="build_button_item";
+            div4.setAttribute("type","submit");
+            div4.setAttribute("onclick",`build_detail_show('${x[0].name}','${num}','${set_no}')`);
+            div4.innerHTML = `${x[0].build_type[num].built}`;
+            if(button_select == build_no)
+                div4.style.backgroundImage = 'var(--selection)';
+            document.getElementsByClassName("build_button")[set_no].appendChild(div4);
+            button_select++;
+        }
+
+        myNode = document.getElementsByClassName("weapon_list")[set_no];
+        while (myNode.firstChild)
+            myNode.removeChild(myNode.lastChild);
+
+        let weapon_count = 0;
+        if(set_no == 0)
+            weapon_count = 0;
+        else
+            weapon_count = 10;
+
+        for(let num in x[0].build_type[build_no]){
+            if(num.includes('weapon'))
+                if(x[0].build_type[build_no][num][0] != ""){
+
+                    div6 = document.createElement("div");
+                    div6.className="weapon_list_item";          
+                    document.getElementsByClassName("weapon_list")[set_no].appendChild(div6);
+
+                    div6 = document.createElement("div");
+                    div6.className="weapon_number";
+                    if(set_no == 0)
+                        div6.innerHTML=weapon_count+1;
+                    else
+                        div6.innerHTML=weapon_count-9; 
+                    document.getElementsByClassName("weapon_list_item")[weapon_count].appendChild(div6);
+
+                    div6 = document.createElement("img");
+                    div6.className="weapon_list_item_img";  
+                    div6.setAttribute("src",`${x[0].build_type[build_no][num][1]}`);
+
+                    let weapon_quality = `${x[0].build_type[build_no][num][0]}`;
+                    if(weapon_quality.includes('(5☆'))
+                        div6.style.backgroundImage='var(--star5)';
+                    else if(weapon_quality.includes('(4☆'))
+                        div6.style.backgroundImage='var(--star4)';
+                    else if(weapon_quality.includes('(3☆'))
+                        div6.style.backgroundImage='var(--star3)';
+                    document.getElementsByClassName("weapon_list_item")[weapon_count].appendChild(div6);
+                                
+                    div6 = document.createElement("span");
+                    div6.className="weapon_name";
+                    div6.innerHTML=`${x[0].build_type[build_no][num][0]}`;
+                    document.getElementsByClassName("weapon_list_item")[weapon_count].appendChild(div6);
+                           
+                    weapon_count++;
+                    if(weapon_count == 6){
+                        var ele=document.getElementsByClassName("weapon_list")[set_no];
+                        ele.style.width = "28.8vw";
+                    }
+                    if(weapon_count == 16){
+                        var ele=document.getElementsByClassName("weapon_list")[set_no];
+                        ele.style.width = "28.8vw";
+                    }
+                }
+                else{
+                    weapon_count++;
+
+                    div6 = document.createElement("div");
+                    div6.className="weapon_list_item";     
+                    div6.style.width="0vw"; 
+                    div6.style.margin="0px";    
+                    document.getElementsByClassName("weapon_list")[set_no].appendChild(div6);
+                }
+        }
+
+        myNode = document.getElementsByClassName("artifact_list")[set_no];
+        while (myNode.firstChild)
+            myNode.removeChild(myNode.lastChild);
+
+        let artifact_count = 0;
+        if(set_no == 0)
+            artifact_count = 0;
+        else
+            artifact_count = 5;
+
+        for(let num in x[0].build_type[build_no]){
+            if(num.includes('artifact')){
+                if(x[0].build_type[build_no][num][0] != ""){
+                    let artifact_length = x[0].build_type[build_no][num].length;
+
+                    if(artifact_length == 2){
+
+                        div6 = document.createElement("div");
+                        div6.className="artifact_list_item";
+                        document.getElementsByClassName("artifact_list")[set_no].appendChild(div6);
+
+                        div6 = document.createElement("img");
+                        div6.className="artifact_list_item_img";
+                        div6.setAttribute("src",`${x[0].build_type[build_no][num][1]}`);
+                        div6.style.backgroundImage='var(--artifact_bg)';
+                        document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
+
+                        div6 = document.createElement("div");
+                        div6.className="artifact_number";
+                        div6.innerHTML='4';
+                        document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
+
+                        div6 = document.createElement("div");
+                        div6.className="artifact_name";
+                        div6.innerHTML=`${x[0].build_type[build_no][num][0]}`;
+                        document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
+
+                        artifact_count++;
+                    }
+                    else if(artifact_length == 3){
+                        div6 = document.createElement("div");
+                        div6.className="artifact_list_item";
+                        document.getElementsByClassName("artifact_list")[set_no].appendChild(div6);
+
+                        div6 = document.createElement("img");
+                        div6.className="artifact_list_item_img";
+                        div6.setAttribute("src",`${x[0].build_type[build_no][num][1]}`);
+                        div6.style.backgroundImage='var(--artifact_bg)';
+                        document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
+
+                        div6 = document.createElement("img");
+                        div6.className="artifact_list_item_img";
+                        div6.setAttribute("src",`${x[0].build_type[build_no][num][2]}`);
+                        div6.style.backgroundImage='var(--artifact_bg)';
+                        document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
+
+                        div6 = document.createElement("div");
+                        div6.className="artifact_number";
+                        div6.innerHTML='2';
+                        document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
+
+                        div6 = document.createElement("div");
+                        div6.className="artifact_number";
+                        div6.innerHTML='2';
+                        div6.style.left='4.1vw';
+                        document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
+
+                        div6 = document.createElement("div");
+                        div6.className="artifact_name";
+                        div6.style.left='0.5vw';
+                        div6.innerHTML=`${x[0].build_type[build_no][num][0]}`;
+                        document.getElementsByClassName("artifact_list_item")[artifact_count].appendChild(div6);
+
+                        artifact_count++;
+                    }
+                }
+                else{
+                    div6 = document.createElement("div");
+                    div6.className="artifact_list_item";
+                    div6.style.margin='0px';
+                    div6.style.padding='0px';
+                    document.getElementsByClassName("artifact_list")[set_no].appendChild(div6);
+
+                    artifact_count++;
+                }
+            }
+        }
+
+        myNode = document.getElementsByClassName("sub_stat_list")[set_no];
+        while (myNode.firstChild)
+            myNode.removeChild(myNode.lastChild);
+
+        myNode = document.getElementsByClassName("talent_priority_list")[set_no];
+        while (myNode.firstChild)
+            myNode.removeChild(myNode.lastChild);
+
+        let choice = 0;
+        if(set_no == 0)
+            choice = 0;
+        else
+            choice = 3;
+
+        for(let num in x[0].build_type[build_no]){
+            if(num.includes('main_stat')){
+                if(num.includes('main_stat')){
+                    //SANDS
+                    div6 = document.createElement("div");
+                    div6.className="sub_artifact_detail";
+                    document.getElementsByClassName("sub_stat_list")[set_no].appendChild(div6);
+
+                    div6 = document.createElement("img");
+                    div6.className="sub_artifact_img";
+                    div6.setAttribute("src",`./Images/Artifact_Icon/Sands_of_Eon.webp`);
+                    document.getElementsByClassName("sub_artifact_detail")[choice].appendChild(div6);
+
+                    div6 = document.createElement("div");
+                    div6.className="sub_artifact_text";
+                    div6.innerHTML=`: ${x[0].build_type[build_no][num][0]}`;
+                    document.getElementsByClassName("sub_artifact_detail")[choice].appendChild(div6);
+
+                    div6 = document.createElement("span");
+                    div6.className="artifact_logo_name";
+                    div6.innerHTML="Sands of Eon";
+                    document.getElementsByClassName("sub_artifact_detail")[choice].appendChild(div6);
+
+                    //GOBLET
+                    div6 = document.createElement("div");
+                    div6.className="sub_artifact_detail";
+                    div6.style.top='5vh';
+                    document.getElementsByClassName("sub_stat_list")[set_no].appendChild(div6);
+
+                    div6 = document.createElement("img");
+                    div6.className="sub_artifact_img";
+                    div6.setAttribute("src",`./Images/Artifact_Icon/Goblet_of_Eonothem.webp`);
+                    document.getElementsByClassName("sub_artifact_detail")[choice+1].appendChild(div6);
+
+                    div6 = document.createElement("div");
+                    div6.className="sub_artifact_text";
+                    div6.innerHTML=`: ${x[0].build_type[build_no][num][1]}`;
+                    document.getElementsByClassName("sub_artifact_detail")[choice+1].appendChild(div6);
+
+                    div6 = document.createElement("span");
+                    div6.className="artifact_logo_name";
+                    div6.innerHTML="Goblet of Enothem";
+                    document.getElementsByClassName("sub_artifact_detail")[choice+1].appendChild(div6);
+
+                    //CIRCLET
+                    div6 = document.createElement("div");
+                    div6.className="sub_artifact_detail";
+                    div6.style.top='10vh';
+                    document.getElementsByClassName("sub_stat_list")[set_no].appendChild(div6);
+
+                    div6 = document.createElement("img");
+                    div6.className="sub_artifact_img";
+                    div6.setAttribute("src",`./Images/Artifact_Icon/Circlet_of_Logos.webp`);
+                    document.getElementsByClassName("sub_artifact_detail")[choice+2].appendChild(div6);
+
+                    div6 = document.createElement("div");
+                    div6.className="sub_artifact_text";
+                    div6.innerHTML=`: ${x[0].build_type[build_no][num][2]}`;
+                    document.getElementsByClassName("sub_artifact_detail")[choice+2].appendChild(div6);
+
+                    div6 = document.createElement("span");
+                    div6.className="artifact_logo_name";
+                    div6.innerHTML="Circlet of Logos";
+                    document.getElementsByClassName("sub_artifact_detail")[choice+2].appendChild(div6);
+                }
+            }
+
+            else if(num.includes('stat_priority')){
+                div6 = document.createElement("div");
+                div6.className="sub_stat_priority";
+                div6.innerHTML="Sub Stat Priority";
+                document.getElementsByClassName("sub_stat_list")[set_no].appendChild(div6);
+
+                for(i=0 ; i< x[0].build_type[build_no][num].length ; i++){
+                    if(x[0].build_type[build_no][num][i] != ""){
+                        div6 = document.createElement("div");
+                        div6.className="sub_stat_priority_text";
+                        div6.innerHTML=`${i+1}) ${x[0].build_type[build_no][num][i]}`;
+                        document.getElementsByClassName("sub_stat_priority")[set_no].appendChild(div6);
+                    }
+                }
+            }
+
+            else if(num.includes('talent_order')){
+                div6 = document.createElement("div");
+                div6.className="talent_priority_item";
+                div6.innerHTML=`${x[0].build_type[build_no][num][0]}`;
+                document.getElementsByClassName("talent_priority_list")[set_no].appendChild(div6);
+
+                div6 = document.createElement("div");
+                div6.className="talent_priority_item_separator";
+                div6.innerHTML=" >  ";
+                document.getElementsByClassName("talent_priority_list")[set_no].appendChild(div6);
+
+                div6 = document.createElement("div");
+                div6.className="talent_priority_item";
+                div6.innerHTML=`${x[0].build_type[build_no][num][1]}`;
+                document.getElementsByClassName("talent_priority_list")[set_no].appendChild(div6);
+
+                div6 = document.createElement("div");
+                div6.className="talent_priority_item_separator";
+                div6.innerHTML=" >  ";
+                document.getElementsByClassName("talent_priority_list")[set_no].appendChild(div6);
+
+                div6 = document.createElement("div");
+                div6.className="talent_priority_item";
+                div6.innerHTML=`${x[0].build_type[build_no][num][2]}`;
+                document.getElementsByClassName("talent_priority_list")[set_no].appendChild(div6);
+            }
 
 
 
 
+
+        }
+
+
+
+
+
+
+
+
+    });
 }
 
 
