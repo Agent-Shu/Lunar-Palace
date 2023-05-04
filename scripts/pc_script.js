@@ -1141,6 +1141,7 @@ function character_page_scroll_element(){
     .then(json => { 
         let x = json.filter((item) => {return item});
         for(let i=0 ; i < x.length ; i++){
+            
             let div = document.createElement("div");
             div.className="charcter_scroller_item";
             div.setAttribute("type","submit");
@@ -1161,12 +1162,13 @@ function character_page_scroll_element(){
 }
 character_page_scroll_element();
 
+
 //BACKGROUND CHANGE
 const images = [
-  "./Images/Home_Page/Monstadt.jpg",
-  "./Images/Home_Page/Liyue.png", 
-  "./Images/Home_Page/Inazuma.png",
-  "./Images/Home_Page/Sumeru.jpg"
+  "https://ik.imagekit.io/agents/Images/Home_Page/Monstadt.jpg",
+  "https://ik.imagekit.io/agents/Images/Home_Page/Liyue.png", 
+  "https://ik.imagekit.io/agents/Images/Home_Page/Inazuma.png",
+  "https://ik.imagekit.io/agents/Images/Home_Page/Sumeru.jpg"
 ];
 function bg_change(){
     const temp = setInterval(() =>{
