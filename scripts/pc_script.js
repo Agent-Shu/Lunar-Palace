@@ -20,6 +20,11 @@ function goto_character(character){
     document.getElementsByClassName("character_page")[0].style.opacity = "1";
 }
 
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 let char_page_no = 1;
 let curr_char = 0;
 function character_select(character)
@@ -784,6 +789,8 @@ function character_select(character)
 }
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 //Build Detail Swapper
 function build_detail_show(char_name ,build_no, set_no){
@@ -1088,19 +1095,7 @@ function build_detail_show(char_name ,build_no, set_no){
                 document.getElementsByClassName("talent_priority_list")[set_no].appendChild(div6);
             }
 
-
-
-
-
         }
-
-
-
-
-
-
-
-
     });
 }
 
@@ -1141,17 +1136,11 @@ function build_detail_show(char_name ,build_no, set_no){
 
 //Scroller Element
 function character_page_scroll_element(){
-    let max_char=0;
     fetch('./data/data.json')
     .then(response => response.json())
     .then(json => { 
         let x = json.filter((item) => {return item});
-
-        for(let num in x)
-            max_char = num;
-
-        for(let i=0 ; i <= max_char ; i++){
-
+        for(let i=0 ; i < x.length ; i++){
             let div = document.createElement("div");
             div.className="charcter_scroller_item";
             div.setAttribute("type","submit");
@@ -1205,13 +1194,11 @@ bg_change();
 
 
 
-
-
 // ONLY FOR TESTING BELOW
-fetch('./data/data.json')
-.then(response => response.json())
-.then(json => { 
-    let x = json.filter((item) => { return item.name == "Bennett";});
+// fetch('./data/data.json')
+// .then(response => response.json())
+// .then(json => { 
+//     let x = json.filter((item) => { return item.name == "Bennett";});
 
     // if(x[0] != null)
         
@@ -1220,8 +1207,7 @@ fetch('./data/data.json')
     // for (let key in x[0].build_type)
     //     console.log(key);
 
-});
-
+// });
 
 // console.log(json);
 // console.log(json.filter((item) => { return item.id == 2;}));
