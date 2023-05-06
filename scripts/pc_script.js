@@ -6,6 +6,8 @@ function goto_home(){
     document.getElementsByClassName("character_page")[0].style.left = "-100vw";
     document.getElementsByClassName("character_page")[0].style.opacity = "0";
 
+    document.getElementsByClassName("custom_filter_page")[0].style.top = "-80vh";
+    document.getElementsByClassName("custom_filter_page")[0].style.opacity = "0";
 }
 
 function goto_character(character){
@@ -20,7 +22,18 @@ function goto_character(character){
     document.getElementsByClassName("character_page")[0].style.opacity = "1";
 }
 
+function goto_custom(){
 
+    document.getElementsByClassName("home_page")[0].style.top = "-100vh";
+    document.getElementsByClassName("home_page")[0].style.opacity = "0";
+    
+    document.getElementsByClassName("character_page")[0].style.left = "0vw";
+    document.getElementsByClassName("character_page")[0].style.opacity = "1";
+
+    document.getElementsByClassName("custom_filter_page")[0].style.top = "12.5vh";
+    document.getElementsByClassName("custom_filter_page")[0].style.opacity = "1";
+    
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1100,24 +1113,327 @@ function build_detail_show(char_name ,build_no, set_no){
 }
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+//CHARACTER FILTER
+let quality = null;
+function quality_set(val){
+    if(quality != val){
+        if(val == '4'){
+            document.getElementsByClassName("button")[1].style.backgroundColor="#1964aa";
+            document.getElementsByClassName("button")[0].style.backgroundColor="#66a0cf";
+            quality = val;
+        }
+        else if(val == '5'){
+            document.getElementsByClassName("button")[0].style.backgroundColor="#1964aa";
+            document.getElementsByClassName("button")[1].style.backgroundColor="#66a0cf";
+            quality = val;
+        }  
+    }
+    else if(quality == val){
+        document.getElementsByClassName("button")[0].style.backgroundColor="#66a0cf";
+        document.getElementsByClassName("button")[1].style.backgroundColor="#66a0cf";
+        quality = null;
+    }
+}
+
+let vision = null;
+function vision_set(val){
+    if(vision != val){
+        if(val == 'Anemo'){
+            document.getElementsByClassName("button")[2].style.backgroundColor="#1964aa";
+            document.getElementsByClassName("button")[3].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[4].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[5].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[6].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[7].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[8].style.backgroundColor="#66a0cf";
+            vision = val;
+        }
+        else if(val == 'Cryo'){
+            document.getElementsByClassName("button")[2].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[3].style.backgroundColor="#1964aa";
+            document.getElementsByClassName("button")[4].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[5].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[6].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[7].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[8].style.backgroundColor="#66a0cf";
+            vision = val;
+        }
+        else if(val == 'Dendro'){
+            document.getElementsByClassName("button")[2].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[3].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[4].style.backgroundColor="#1964aa";
+            document.getElementsByClassName("button")[5].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[6].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[7].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[8].style.backgroundColor="#66a0cf";
+            vision = val;
+        } 
+        else if(val == 'Electro'){
+            document.getElementsByClassName("button")[2].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[3].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[4].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[5].style.backgroundColor="#1964aa";
+            document.getElementsByClassName("button")[6].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[7].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[8].style.backgroundColor="#66a0cf";
+            vision = val;
+        }  
+        else if(val == 'Geo'){
+            document.getElementsByClassName("button")[2].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[3].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[4].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[5].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[6].style.backgroundColor="#1964aa";
+            document.getElementsByClassName("button")[7].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[8].style.backgroundColor="#66a0cf";
+            vision = val;
+        } 
+        else if(val == 'Hydro'){
+            document.getElementsByClassName("button")[2].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[3].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[4].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[5].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[6].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[7].style.backgroundColor="#1964aa";
+            document.getElementsByClassName("button")[8].style.backgroundColor="#66a0cf";
+            vision = val;
+        } 
+        else if(val == 'Pyro'){
+            document.getElementsByClassName("button")[2].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[3].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[4].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[5].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[6].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[7].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[8].style.backgroundColor="#1964aa";
+            vision = val;
+        } 
+    }
+    else if(vision == val){
+        document.getElementsByClassName("button")[2].style.backgroundColor="#66a0cf";
+        document.getElementsByClassName("button")[3].style.backgroundColor="#66a0cf";
+        document.getElementsByClassName("button")[4].style.backgroundColor="#66a0cf";
+        document.getElementsByClassName("button")[5].style.backgroundColor="#66a0cf";
+        document.getElementsByClassName("button")[6].style.backgroundColor="#66a0cf";
+        document.getElementsByClassName("button")[7].style.backgroundColor="#66a0cf";
+        document.getElementsByClassName("button")[8].style.backgroundColor="#66a0cf";
+        vision = null;
+    }
+}
+
+let weapon = null;
+function weapon_set(val){
+    if(weapon != val){
+        if(val == 'Bow'){
+            document.getElementsByClassName("button")[9].style.backgroundColor="#1964aa";
+            document.getElementsByClassName("button")[10].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[11].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[12].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[13].style.backgroundColor="#66a0cf";
+            weapon = val;
+        }
+        else if(val == 'Catalyst'){
+            document.getElementsByClassName("button")[9].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[10].style.backgroundColor="#1964aa";
+            document.getElementsByClassName("button")[11].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[12].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[13].style.backgroundColor="#66a0cf";
+            weapon = val;
+        }
+        else if(val == 'Claymore'){
+            document.getElementsByClassName("button")[9].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[10].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[11].style.backgroundColor="#1964aa";
+            document.getElementsByClassName("button")[12].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[13].style.backgroundColor="#66a0cf";
+            weapon = val;
+        } 
+        else if(val == 'Polearm'){
+            document.getElementsByClassName("button")[9].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[10].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[11].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[12].style.backgroundColor="#1964aa";
+            document.getElementsByClassName("button")[13].style.backgroundColor="#66a0cf";
+            weapon= val;
+        }  
+        else if(val == 'Sword'){
+            document.getElementsByClassName("button")[9].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[10].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[11].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[12].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[13].style.backgroundColor="#1964aa";
+            weapon = val;
+        }
+    }
+    else if(weapon == val){
+        document.getElementsByClassName("button")[9].style.backgroundColor="#66a0cf";
+        document.getElementsByClassName("button")[10].style.backgroundColor="#66a0cf";
+        document.getElementsByClassName("button")[11].style.backgroundColor="#66a0cf";
+        document.getElementsByClassName("button")[12].style.backgroundColor="#66a0cf";
+        document.getElementsByClassName("button")[13].style.backgroundColor="#66a0cf";
+        weapon = null;
+    }
+}
+
+let region = null;
+function country_set(val){
+    if(region != val){
+        if(val == 'Mondstadt'){
+            document.getElementsByClassName("button")[14].style.backgroundColor="#1964aa";
+            document.getElementsByClassName("button")[15].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[16].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[17].style.backgroundColor="#66a0cf";
+            region = val;
+        }
+        else if(val == 'Liyue'){
+            document.getElementsByClassName("button")[14].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[15].style.backgroundColor="#1964aa";
+            document.getElementsByClassName("button")[16].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[17].style.backgroundColor="#66a0cf";
+            region = val;
+        }
+        else if(val == 'Inazuma'){
+            document.getElementsByClassName("button")[14].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[15].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[16].style.backgroundColor="#1964aa";
+            document.getElementsByClassName("button")[17].style.backgroundColor="#66a0cf";
+            region = val;
+        } 
+        else if(val == 'Sumeru'){
+            document.getElementsByClassName("button")[14].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[15].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[16].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[17].style.backgroundColor="#1964aa";
+            region = val;
+        }  
+    }
+    else if(region == val){
+        document.getElementsByClassName("button")[14].style.backgroundColor="#66a0cf";
+        document.getElementsByClassName("button")[15].style.backgroundColor="#66a0cf";
+        document.getElementsByClassName("button")[16].style.backgroundColor="#66a0cf";
+        document.getElementsByClassName("button")[17].style.backgroundColor="#66a0cf";
+        region = null;
+    }
+}
 
 
+function submission_confirm(ch){
+    if(ch == 'y'){
+        fetch('./data/data.json')
+        .then(response => response.json())
+        .then(json => { 
+        let x = json.filter((item) => {return item});
+            if(quality != null){
+                x = x.filter((val) => {
+                for(let i=0 ; i < x.length ; i++)
+                if(val.quality == `${quality}`)
+                    return val;
+                });
+            }
+            if(vision != null){
+                x = x.filter((val) => {
+                for(let i=0 ; i < x.length ; i++)
+                if(val.vision[0] == `${vision}`)
+                    return val;
+                });
+            }
+            if(weapon != null){
+                x = x.filter((val) => {
+                for(let i=0 ; i < x.length ; i++)
+                if(val.weapon[0] == `${weapon}`)
+                    return val;
+                });
+            }
+            if(region != null){
+                x = x.filter((val) => {
+                for(let i=0 ; i < x.length ; i++)
+                if(val.country == `${region}`)
+                    return val;
+                });
+            }
 
+            if(x.length != 0){
+                const myNode = document.getElementsByClassName("charcter_scroller")[0];
+                while (myNode.firstChild)
+                    myNode.removeChild(myNode.lastChild);
 
+                for(let i=0 ; i < x.length ; i++){
+                    let div = document.createElement("div");
+                    div.className="charcter_scroller_item";
+                    div.setAttribute("type","submit");
+                    div.setAttribute("onclick",`character_select("${x[i].name}")`);
+                    document.getElementsByClassName("charcter_scroller")[0].appendChild(div);
+                    let div1 = document.createElement("img");
+                    div1.className="scroller_img";
+                    div1.setAttribute("src",`${x[i].img[0]}`)
+                    document.getElementsByClassName("charcter_scroller_item")[i].appendChild(div1);
+                    let spa = document.createElement("span");
+                    spa.className="tooltip";
+                    spa.innerHTML=`${x[i].name}`;
+                    document.getElementsByClassName("charcter_scroller_item")[i].appendChild(spa);
+                }
+                document.getElementsByClassName("custom_filter_page")[0].style.top = "-80vh";
+                document.getElementsByClassName("custom_filter_page")[0].style.opacity = "0";
+            }
+            else if(x.length == 0){
+                alert("No Characters Exists, please change filter !");
+                button_clear();
+                quality = null;
+                vision = null;
+                weapon = null;
+                region = null;
+            }
+        });
+    }
+    else if(ch == 'n'){
 
+        button_clear();
 
+        const myNode = document.getElementsByClassName("charcter_scroller")[0];
+        while (myNode.firstChild)
+            myNode.removeChild(myNode.lastChild);
 
+        document.getElementsByClassName("custom_filter_page")[0].style.top = "-80vh";
+        document.getElementsByClassName("custom_filter_page")[0].style.opacity = "0";
+        quality = null;
+        vision = null;
+        weapon = null;
+        region = null;
 
+        character_page_scroll_element();
+    }
+}
 
-
-
-
-
-
-
-
+function button_clear(){
+    document.getElementsByClassName("button")[0].style.backgroundColor="#66a0cf";
+    document.getElementsByClassName("button")[1].style.backgroundColor="#66a0cf";
+    document.getElementsByClassName("button")[2].style.backgroundColor="#66a0cf";
+    document.getElementsByClassName("button")[3].style.backgroundColor="#66a0cf";
+    document.getElementsByClassName("button")[4].style.backgroundColor="#66a0cf";
+    document.getElementsByClassName("button")[5].style.backgroundColor="#66a0cf";
+    document.getElementsByClassName("button")[6].style.backgroundColor="#66a0cf";
+    document.getElementsByClassName("button")[7].style.backgroundColor="#66a0cf";
+    document.getElementsByClassName("button")[8].style.backgroundColor="#66a0cf";
+    document.getElementsByClassName("button")[2].style.backgroundColor="#66a0cf";
+    document.getElementsByClassName("button")[3].style.backgroundColor="#66a0cf";
+    document.getElementsByClassName("button")[4].style.backgroundColor="#66a0cf";
+    document.getElementsByClassName("button")[5].style.backgroundColor="#66a0cf";
+    document.getElementsByClassName("button")[6].style.backgroundColor="#66a0cf";
+    document.getElementsByClassName("button")[7].style.backgroundColor="#66a0cf";
+    document.getElementsByClassName("button")[8].style.backgroundColor="#66a0cf";
+    document.getElementsByClassName("button")[9].style.backgroundColor="#66a0cf";
+    document.getElementsByClassName("button")[10].style.backgroundColor="#66a0cf";
+    document.getElementsByClassName("button")[11].style.backgroundColor="#66a0cf";
+    document.getElementsByClassName("button")[12].style.backgroundColor="#66a0cf";
+    document.getElementsByClassName("button")[13].style.backgroundColor="#66a0cf";
+    document.getElementsByClassName("button")[14].style.backgroundColor="#66a0cf";
+    document.getElementsByClassName("button")[15].style.backgroundColor="#66a0cf";
+    document.getElementsByClassName("button")[16].style.backgroundColor="#66a0cf";
+    document.getElementsByClassName("button")[17].style.backgroundColor="#66a0cf";
+}
 
 
 
@@ -1140,6 +1456,13 @@ function character_page_scroll_element(){
     .then(response => response.json())
     .then(json => { 
         let x = json.filter((item) => {return item});
+
+        // x = x.filter((val) => {
+        //     for(let i=0 ; i < x.length ; i++)
+        //         if(val.weapon[0] == 'Sword')
+        //             return val;
+        // });
+
         for(let i=0 ; i < x.length ; i++){
             
             let div = document.createElement("div");

@@ -792,17 +792,143 @@
 }
 
 
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 
+.custom_filter_page{
+    display: flex;
+    flex-direction: column;
 
+    position: absolute;
+    top: -80vh;
+    left: 10vw;
+    width: 80vw;
+    height: 75vh;
 
+    opacity: 0;
+    transition: ease-in-out 1s;
 
+    background-color: rgba(29, 29, 29, 0.623);
+    backdrop-filter: blur(8px);
+    border: 2px solid rgba(255, 255, 255, 0.336);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+}
 
+.custom_filter_head{
+    position: absolute;
+    top: 0.5vh;
+    left: 0.5vw;
 
+    font-family: genshin;
+    font-size: 1.2vw;
+    color: white;
+}
 
+.button_head{
+    font-family: genshin;
+    font-size: 0.8vw;
+    color: white;
 
+    margin-top: 4.5vh;
+    margin-inline: 0.5vw;
+}
 
+.button_heads{
+    font-family: genshin;
+    font-size: 0.8vw;
+    color: white;
 
+    margin-top: 0vh;
+    margin-inline: 0.5vw;
+}
+
+.button_field{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    margin-left: 0.8vw;
+}
+
+.button{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 6.5vw;
+    height: 5vh;
+
+    font-family: genshin;
+    font-size: 0.8vw;
+    color: white;
+    
+    margin: 4px;
+    background-color: #66a0cf;
+    border-radius: 10px;
+
+    user-select: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover{
+    background-color: #1964aa;
+    cursor: pointer;
+}
+
+.submission_head{
+    position: absolute;
+    top: 60vh;
+    left: 35.7vw;
+
+    font-family: genshin;
+    font-size: 0.8vw;
+    color: white;
+
+    margin-top: 1.2vh;
+    margin-inline: 0.5vw;
+}
+
+.submission_field{
+    position: absolute;
+    top: 65vh;
+    left: 32vw;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    margin-left: 0.8vw;
+
+}
+
+.submission_button{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 6.5vw;
+    height: 5vh;
+
+    font-family: genshin;
+    font-size: 0.8vw;
+    color: white;
+    
+    margin: 4px;
+    background-color: #66a0cf;
+    border-radius: 10px;
+
+    user-select: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.submission_button:hover{
+    cursor: pointer;
+}
 
 
 

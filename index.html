@@ -14,10 +14,7 @@
         <div class="nav_bar">     
             <div class="nav_bar_item" type="submit" onclick="goto_home()"> <img src="./Images/favicon/Lunar_Palace.ico"> </div>
             <div class="nav_bar_item" type="submit" onclick="goto_character()"> Character </div>
-            <!-- <div class="nav_bar_item" type="submit" onclick="goto_quality()"> Quality </div>
-            <div class="nav_bar_item" type="submit" onclick="goto_vision()"> Vision </div>
-            <div class="nav_bar_item" type="submit" onclick="goto_weapon()"> Weapon </div> -->
-            <div class="nav_bar_item" type="submit" onclick="got0_custom()"> Custom </div>
+            <div class="nav_bar_item" type="submit" onclick="goto_custom()"> Custom </div>
             <div class="nav_bar_item" type="submit" onclick="goto_credits()"> Help & Credits </div>
         </div>
 
@@ -50,10 +47,50 @@
                 </div>
 
             </div>
+        </div>
 
+        <div class="custom_filter_page">
+            <div class="custom_filter_head">Character Filter</div>
 
+            <div class="button_head">Character Rarity</div>
+            <div class="button_field">
+                <div class="button" type="submit" onclick="quality_set('5')">5🌟 Star</div>
+                <div class="button" type="submit" onclick="quality_set('4')">4⭐️ Star</div>
+            </div>
 
+            <div class="button_heads">Element</div>
+            <div class="button_field">
+                <div class="button" type="submit" onclick="vision_set('Anemo')">Anemo</div>
+                <div class="button" type="submit" onclick="vision_set('Cryo')">Cryo</div>
+                <div class="button" type="submit" onclick="vision_set('Dendro')">Dendro</div>
+                <div class="button" type="submit" onclick="vision_set('Electro')">Electro</div>
+                <div class="button" type="submit" onclick="vision_set('Geo')">Geo</div>
+                <div class="button" type="submit" onclick="vision_set('Hydro')">Hydro</div>
+                <div class="button" type="submit" onclick="vision_set('Pyro')">Pyro</div>
+            </div>
 
+            <div class="button_heads">Weapon Type</div>
+            <div class="button_field">
+                <div class="button" type="submit" onclick="weapon_set('Bow')">Bow</div>
+                <div class="button" type="submit" onclick="weapon_set('Catalyst')">Catalyst</div>
+                <div class="button" type="submit" onclick="weapon_set('Claymore')">Claymore</div>
+                <div class="button" type="submit" onclick="weapon_set('Polearm')">Polearm</div>
+                <div class="button" type="submit" onclick="weapon_set('Sword')">Sword</div>
+            </div>
+
+            <div class="button_heads">Region</div>
+            <div class="button_field">
+                <div class="button" type="submit" onclick="country_set('Mondstadt')">Mondstadt</div>
+                <div class="button" type="submit" onclick="country_set('Liyue')">Liyue</div>
+                <div class="button" type="submit" onclick="country_set('Inazuma')">Inazuma</div>
+                <div class="button" type="submit" onclick="country_set('Sumeru')">Sumeru</div>
+            </div>
+
+            <div class="submission_head">Apply the filter ?</div>
+            <div class="submission_field">
+                <div class="submission_button" style="background-color: green" type="submit" onclick="submission_confirm('y')">YES</div>
+                <div class="submission_button" style="background-color: red" type="submit" onclick="submission_confirm('n')">NO</div>
+            </div>
 
         </div>
 
@@ -63,10 +100,6 @@
 
 
 
-
-
-
-        
         <script id="js_script" src="main.js"></script>
     </body>
 </html>
