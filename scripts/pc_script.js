@@ -1379,16 +1379,13 @@ function submission_confirm(ch){
                 document.getElementsByClassName("custom_filter_page")[0].style.opacity = "0";
             }
             else if(x.length == 0){
-                alert("No Characters found, please change filter !");
                 button_clear();
                 quality = null;
                 vision = null;
                 weapon = null;
                 region = null;
-                
-                document.getElementsByClassName("custom_filter_page")[0].style.top = "-80vh";
-                document.getElementsByClassName("custom_filter_page")[0].style.opacity = "0";
-                character_page_scroll_element();
+
+                alert("No Characters found, please change filter !");
             }
         });
     }
