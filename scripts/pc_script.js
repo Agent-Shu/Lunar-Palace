@@ -1385,6 +1385,10 @@ function submission_confirm(ch){
                 vision = null;
                 weapon = null;
                 region = null;
+                
+                document.getElementsByClassName("custom_filter_page")[0].style.top = "-80vh";
+                document.getElementsByClassName("custom_filter_page")[0].style.opacity = "0";
+                character_page_scroll_element();
             }
         });
     }
