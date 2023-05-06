@@ -32,7 +32,7 @@ function goto_custom(){
 
     document.getElementsByClassName("custom_filter_page")[0].style.top = "12.5vh";
     document.getElementsByClassName("custom_filter_page")[0].style.opacity = "1";
-    
+
 }
 
 
@@ -1379,7 +1379,7 @@ function submission_confirm(ch){
                 document.getElementsByClassName("custom_filter_page")[0].style.opacity = "0";
             }
             else if(x.length == 0){
-                alert("No Characters Exists, please change filter !");
+                alert("No Characters found, please change filter !");
                 button_clear();
                 quality = null;
                 vision = null;
