@@ -515,6 +515,44 @@
                 "talent_order":["Burst","Skill","Normal"]
             }
         ]
+    },
+
+    {
+        "name": "Collie",
+        "fullname":"Collie",
+        "quality":"4",
+        "img":["./Images/Char_Icon/Collie.png","./Images/Characters/Sumeru/Collie.png"],
+        "country":"Sumeru",
+        "vision":["Dendro","Dendro"],
+        "weapon":["Bow","./Images/Weapon_Icon/Icon_Bow.webp"],
+        "about":"A trainee ranger active in Avidya Forest. Behind her enthusiastic words and actions hides a slightly introverted personality.",
+        
+        "build_type":[
+            {   
+                "built":"Support",
+
+                "weapon_1":["Elegy for the End (5☆)",    "./Images/Weapons/Bow/Weapon_Elegy_for_the_End.webp"],
+                "weapon_2":["Polar Star (5☆)",           "./Images/Weapons/Bow/Weapon_Polar_Star.webp"],
+                "weapon_3":["Sacrificial Bow (4☆) [R4+]","./Images/Weapons/Bow/Weapon_Sacrificial_Bow.webp"],
+                "weapon_4":["Favonius Warbow (4☆)",      "./Images/Weapons/Bow/Weapon_Favonius_Warbow.webp"],
+                "weapon_5":["",""],
+                "weapon_6":["",""],
+                "weapon_7":["",""],
+                "weapon_8":["",""],
+                "weapon_9":["",""],
+                "weapon_10":["",""],
+                        
+                "artifact_1":["Deepwood Memories (4 Piece)",        "./Images/Artifacts/Deepwood.webp"],
+                "artifact_2":["Noblesse Oblige (4 Piece)",          "./Images/Artifacts/Noblesse.webp"],
+                "artifact_3":["Tenacity of the Millelith (4 Piece)","./Images/Artifacts/Tenacity.webp"],
+                "artifact_4":["Instructor (4 Piece)",               "./Images/Artifacts/Instructor.webp"],
+                "artifact_5":["Gilded Dreams (4 Piece)",            "./Images/Artifacts/Gilded.webp"],
+                      
+                "main_stat":["Energy Recharge / Atk% / EM","Dendro Dmg / EM","Crit Rate / Crit Dmg / EM "],
+                "stat_priority":["Energy Recharge","Crit Rate / Crit Dmg","Atk% / Elemental Mastery","",""],
+                "talent_order":["Burst","Skill","Normal"]
+            }
+        ]
     }
 
 

@@ -8,6 +8,9 @@ function goto_home(){
 
     document.getElementsByClassName("custom_filter_page")[0].style.top = "-80vh";
     document.getElementsByClassName("custom_filter_page")[0].style.opacity = "0";
+
+    document.getElementsByClassName("credits_page")[0].style.left = "110vw";
+    document.getElementsByClassName("credits_page")[0].style.opacity = "0";
 }
 
 function goto_character(character){
@@ -20,6 +23,9 @@ function goto_character(character){
     
     document.getElementsByClassName("character_page")[0].style.left = "0vw";
     document.getElementsByClassName("character_page")[0].style.opacity = "1";
+
+    document.getElementsByClassName("credits_page")[0].style.left = "110vw";
+    document.getElementsByClassName("credits_page")[0].style.opacity = "0";
 }
 
 function goto_custom(){
@@ -32,6 +38,16 @@ function goto_custom(){
 
     document.getElementsByClassName("custom_filter_page")[0].style.top = "12.5vh";
     document.getElementsByClassName("custom_filter_page")[0].style.opacity = "1";
+
+    document.getElementsByClassName("credits_page")[0].style.left = "110vw";
+    document.getElementsByClassName("credits_page")[0].style.opacity = "0";
+
+}
+
+function goto_credits(){
+
+    document.getElementsByClassName("credits_page")[0].style.left = "2vw";
+    document.getElementsByClassName("credits_page")[0].style.opacity = "1";
 
 }
 
@@ -1121,19 +1137,19 @@ let quality = null;
 function quality_set(val){
     if(quality != val){
         if(val == '4'){
-            document.getElementsByClassName("button")[1].style.backgroundColor="#1964aa";
-            document.getElementsByClassName("button")[0].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[1].style.backgroundColor="#074580";
+            document.getElementsByClassName("button")[0].style.backgroundColor="#1a1a1a";
             quality = val;
         }
         else if(val == '5'){
-            document.getElementsByClassName("button")[0].style.backgroundColor="#1964aa";
-            document.getElementsByClassName("button")[1].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[0].style.backgroundColor="#074580";
+            document.getElementsByClassName("button")[1].style.backgroundColor="#1a1a1a";
             quality = val;
         }  
     }
     else if(quality == val){
-        document.getElementsByClassName("button")[0].style.backgroundColor="#66a0cf";
-        document.getElementsByClassName("button")[1].style.backgroundColor="#66a0cf";
+        document.getElementsByClassName("button")[0].style.backgroundColor="#1a1a1a";
+        document.getElementsByClassName("button")[1].style.backgroundColor="#1a1a1a";
         quality = null;
     }
 }
@@ -1142,84 +1158,84 @@ let vision = null;
 function vision_set(val){
     if(vision != val){
         if(val == 'Anemo'){
-            document.getElementsByClassName("button")[2].style.backgroundColor="#1964aa";
-            document.getElementsByClassName("button")[3].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[4].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[5].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[6].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[7].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[8].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[2].style.backgroundColor="#074580";
+            document.getElementsByClassName("button")[3].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[4].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[5].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[6].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[7].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[8].style.backgroundColor="#1a1a1a";
             vision = val;
         }
         else if(val == 'Cryo'){
-            document.getElementsByClassName("button")[2].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[3].style.backgroundColor="#1964aa";
-            document.getElementsByClassName("button")[4].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[5].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[6].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[7].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[8].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[2].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[3].style.backgroundColor="#074580";
+            document.getElementsByClassName("button")[4].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[5].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[6].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[7].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[8].style.backgroundColor="#1a1a1a";
             vision = val;
         }
         else if(val == 'Dendro'){
-            document.getElementsByClassName("button")[2].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[3].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[4].style.backgroundColor="#1964aa";
-            document.getElementsByClassName("button")[5].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[6].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[7].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[8].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[2].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[3].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[4].style.backgroundColor="#074580";
+            document.getElementsByClassName("button")[5].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[6].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[7].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[8].style.backgroundColor="#1a1a1a";
             vision = val;
         } 
         else if(val == 'Electro'){
-            document.getElementsByClassName("button")[2].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[3].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[4].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[5].style.backgroundColor="#1964aa";
-            document.getElementsByClassName("button")[6].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[7].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[8].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[2].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[3].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[4].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[5].style.backgroundColor="#074580";
+            document.getElementsByClassName("button")[6].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[7].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[8].style.backgroundColor="#1a1a1a";
             vision = val;
         }  
         else if(val == 'Geo'){
-            document.getElementsByClassName("button")[2].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[3].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[4].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[5].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[6].style.backgroundColor="#1964aa";
-            document.getElementsByClassName("button")[7].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[8].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[2].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[3].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[4].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[5].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[6].style.backgroundColor="#074580";
+            document.getElementsByClassName("button")[7].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[8].style.backgroundColor="#1a1a1a";
             vision = val;
         } 
         else if(val == 'Hydro'){
-            document.getElementsByClassName("button")[2].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[3].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[4].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[5].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[6].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[7].style.backgroundColor="#1964aa";
-            document.getElementsByClassName("button")[8].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[2].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[3].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[4].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[5].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[6].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[7].style.backgroundColor="#074580";
+            document.getElementsByClassName("button")[8].style.backgroundColor="#1a1a1a";
             vision = val;
         } 
         else if(val == 'Pyro'){
-            document.getElementsByClassName("button")[2].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[3].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[4].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[5].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[6].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[7].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[8].style.backgroundColor="#1964aa";
+            document.getElementsByClassName("button")[2].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[3].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[4].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[5].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[6].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[7].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[8].style.backgroundColor="#074580";
             vision = val;
         } 
     }
     else if(vision == val){
-        document.getElementsByClassName("button")[2].style.backgroundColor="#66a0cf";
-        document.getElementsByClassName("button")[3].style.backgroundColor="#66a0cf";
-        document.getElementsByClassName("button")[4].style.backgroundColor="#66a0cf";
-        document.getElementsByClassName("button")[5].style.backgroundColor="#66a0cf";
-        document.getElementsByClassName("button")[6].style.backgroundColor="#66a0cf";
-        document.getElementsByClassName("button")[7].style.backgroundColor="#66a0cf";
-        document.getElementsByClassName("button")[8].style.backgroundColor="#66a0cf";
+        document.getElementsByClassName("button")[2].style.backgroundColor="#1a1a1a";
+        document.getElementsByClassName("button")[3].style.backgroundColor="#1a1a1a";
+        document.getElementsByClassName("button")[4].style.backgroundColor="#1a1a1a";
+        document.getElementsByClassName("button")[5].style.backgroundColor="#1a1a1a";
+        document.getElementsByClassName("button")[6].style.backgroundColor="#1a1a1a";
+        document.getElementsByClassName("button")[7].style.backgroundColor="#1a1a1a";
+        document.getElementsByClassName("button")[8].style.backgroundColor="#1a1a1a";
         vision = null;
     }
 }
@@ -1228,52 +1244,52 @@ let weapon = null;
 function weapon_set(val){
     if(weapon != val){
         if(val == 'Bow'){
-            document.getElementsByClassName("button")[9].style.backgroundColor="#1964aa";
-            document.getElementsByClassName("button")[10].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[11].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[12].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[13].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[9].style.backgroundColor="#074580";
+            document.getElementsByClassName("button")[10].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[11].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[12].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[13].style.backgroundColor="#1a1a1a";
             weapon = val;
         }
         else if(val == 'Catalyst'){
-            document.getElementsByClassName("button")[9].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[10].style.backgroundColor="#1964aa";
-            document.getElementsByClassName("button")[11].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[12].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[13].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[9].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[10].style.backgroundColor="#074580";
+            document.getElementsByClassName("button")[11].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[12].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[13].style.backgroundColor="#1a1a1a";
             weapon = val;
         }
         else if(val == 'Claymore'){
-            document.getElementsByClassName("button")[9].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[10].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[11].style.backgroundColor="#1964aa";
-            document.getElementsByClassName("button")[12].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[13].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[9].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[10].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[11].style.backgroundColor="#074580";
+            document.getElementsByClassName("button")[12].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[13].style.backgroundColor="#1a1a1a";
             weapon = val;
         } 
         else if(val == 'Polearm'){
-            document.getElementsByClassName("button")[9].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[10].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[11].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[12].style.backgroundColor="#1964aa";
-            document.getElementsByClassName("button")[13].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[9].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[10].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[11].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[12].style.backgroundColor="#074580";
+            document.getElementsByClassName("button")[13].style.backgroundColor="#1a1a1a";
             weapon= val;
         }  
         else if(val == 'Sword'){
-            document.getElementsByClassName("button")[9].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[10].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[11].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[12].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[13].style.backgroundColor="#1964aa";
+            document.getElementsByClassName("button")[9].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[10].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[11].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[12].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[13].style.backgroundColor="#074580";
             weapon = val;
         }
     }
     else if(weapon == val){
-        document.getElementsByClassName("button")[9].style.backgroundColor="#66a0cf";
-        document.getElementsByClassName("button")[10].style.backgroundColor="#66a0cf";
-        document.getElementsByClassName("button")[11].style.backgroundColor="#66a0cf";
-        document.getElementsByClassName("button")[12].style.backgroundColor="#66a0cf";
-        document.getElementsByClassName("button")[13].style.backgroundColor="#66a0cf";
+        document.getElementsByClassName("button")[9].style.backgroundColor="#1a1a1a";
+        document.getElementsByClassName("button")[10].style.backgroundColor="#1a1a1a";
+        document.getElementsByClassName("button")[11].style.backgroundColor="#1a1a1a";
+        document.getElementsByClassName("button")[12].style.backgroundColor="#1a1a1a";
+        document.getElementsByClassName("button")[13].style.backgroundColor="#1a1a1a";
         weapon = null;
     }
 }
@@ -1282,39 +1298,39 @@ let region = null;
 function country_set(val){
     if(region != val){
         if(val == 'Mondstadt'){
-            document.getElementsByClassName("button")[14].style.backgroundColor="#1964aa";
-            document.getElementsByClassName("button")[15].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[16].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[17].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[14].style.backgroundColor="#074580";
+            document.getElementsByClassName("button")[15].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[16].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[17].style.backgroundColor="#1a1a1a";
             region = val;
         }
         else if(val == 'Liyue'){
-            document.getElementsByClassName("button")[14].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[15].style.backgroundColor="#1964aa";
-            document.getElementsByClassName("button")[16].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[17].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[14].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[15].style.backgroundColor="#074580";
+            document.getElementsByClassName("button")[16].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[17].style.backgroundColor="#1a1a1a";
             region = val;
         }
         else if(val == 'Inazuma'){
-            document.getElementsByClassName("button")[14].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[15].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[16].style.backgroundColor="#1964aa";
-            document.getElementsByClassName("button")[17].style.backgroundColor="#66a0cf";
+            document.getElementsByClassName("button")[14].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[15].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[16].style.backgroundColor="#074580";
+            document.getElementsByClassName("button")[17].style.backgroundColor="#1a1a1a";
             region = val;
         } 
         else if(val == 'Sumeru'){
-            document.getElementsByClassName("button")[14].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[15].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[16].style.backgroundColor="#66a0cf";
-            document.getElementsByClassName("button")[17].style.backgroundColor="#1964aa";
+            document.getElementsByClassName("button")[14].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[15].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[16].style.backgroundColor="#1a1a1a";
+            document.getElementsByClassName("button")[17].style.backgroundColor="#074580";
             region = val;
         }  
     }
     else if(region == val){
-        document.getElementsByClassName("button")[14].style.backgroundColor="#66a0cf";
-        document.getElementsByClassName("button")[15].style.backgroundColor="#66a0cf";
-        document.getElementsByClassName("button")[16].style.backgroundColor="#66a0cf";
-        document.getElementsByClassName("button")[17].style.backgroundColor="#66a0cf";
+        document.getElementsByClassName("button")[14].style.backgroundColor="#1a1a1a";
+        document.getElementsByClassName("button")[15].style.backgroundColor="#1a1a1a";
+        document.getElementsByClassName("button")[16].style.backgroundColor="#1a1a1a";
+        document.getElementsByClassName("button")[17].style.backgroundColor="#1a1a1a";
         region = null;
     }
 }
@@ -1409,45 +1425,32 @@ function submission_confirm(ch){
 }
 
 function button_clear(){
-    document.getElementsByClassName("button")[0].style.backgroundColor="#66a0cf";
-    document.getElementsByClassName("button")[1].style.backgroundColor="#66a0cf";
-    document.getElementsByClassName("button")[2].style.backgroundColor="#66a0cf";
-    document.getElementsByClassName("button")[3].style.backgroundColor="#66a0cf";
-    document.getElementsByClassName("button")[4].style.backgroundColor="#66a0cf";
-    document.getElementsByClassName("button")[5].style.backgroundColor="#66a0cf";
-    document.getElementsByClassName("button")[6].style.backgroundColor="#66a0cf";
-    document.getElementsByClassName("button")[7].style.backgroundColor="#66a0cf";
-    document.getElementsByClassName("button")[8].style.backgroundColor="#66a0cf";
-    document.getElementsByClassName("button")[2].style.backgroundColor="#66a0cf";
-    document.getElementsByClassName("button")[3].style.backgroundColor="#66a0cf";
-    document.getElementsByClassName("button")[4].style.backgroundColor="#66a0cf";
-    document.getElementsByClassName("button")[5].style.backgroundColor="#66a0cf";
-    document.getElementsByClassName("button")[6].style.backgroundColor="#66a0cf";
-    document.getElementsByClassName("button")[7].style.backgroundColor="#66a0cf";
-    document.getElementsByClassName("button")[8].style.backgroundColor="#66a0cf";
-    document.getElementsByClassName("button")[9].style.backgroundColor="#66a0cf";
-    document.getElementsByClassName("button")[10].style.backgroundColor="#66a0cf";
-    document.getElementsByClassName("button")[11].style.backgroundColor="#66a0cf";
-    document.getElementsByClassName("button")[12].style.backgroundColor="#66a0cf";
-    document.getElementsByClassName("button")[13].style.backgroundColor="#66a0cf";
-    document.getElementsByClassName("button")[14].style.backgroundColor="#66a0cf";
-    document.getElementsByClassName("button")[15].style.backgroundColor="#66a0cf";
-    document.getElementsByClassName("button")[16].style.backgroundColor="#66a0cf";
-    document.getElementsByClassName("button")[17].style.backgroundColor="#66a0cf";
+    document.getElementsByClassName("button")[0].style.backgroundColor="#1a1a1a";
+    document.getElementsByClassName("button")[1].style.backgroundColor="#1a1a1a";
+    document.getElementsByClassName("button")[2].style.backgroundColor="#1a1a1a";
+    document.getElementsByClassName("button")[3].style.backgroundColor="#1a1a1a";
+    document.getElementsByClassName("button")[4].style.backgroundColor="#1a1a1a";
+    document.getElementsByClassName("button")[5].style.backgroundColor="#1a1a1a";
+    document.getElementsByClassName("button")[6].style.backgroundColor="#1a1a1a";
+    document.getElementsByClassName("button")[7].style.backgroundColor="#1a1a1a";
+    document.getElementsByClassName("button")[8].style.backgroundColor="#1a1a1a";
+    document.getElementsByClassName("button")[2].style.backgroundColor="#1a1a1a";
+    document.getElementsByClassName("button")[3].style.backgroundColor="#1a1a1a";
+    document.getElementsByClassName("button")[4].style.backgroundColor="#1a1a1a";
+    document.getElementsByClassName("button")[5].style.backgroundColor="#1a1a1a";
+    document.getElementsByClassName("button")[6].style.backgroundColor="#1a1a1a";
+    document.getElementsByClassName("button")[7].style.backgroundColor="#1a1a1a";
+    document.getElementsByClassName("button")[8].style.backgroundColor="#1a1a1a";
+    document.getElementsByClassName("button")[9].style.backgroundColor="#1a1a1a";
+    document.getElementsByClassName("button")[10].style.backgroundColor="#1a1a1a";
+    document.getElementsByClassName("button")[11].style.backgroundColor="#1a1a1a";
+    document.getElementsByClassName("button")[12].style.backgroundColor="#1a1a1a";
+    document.getElementsByClassName("button")[13].style.backgroundColor="#1a1a1a";
+    document.getElementsByClassName("button")[14].style.backgroundColor="#1a1a1a";
+    document.getElementsByClassName("button")[15].style.backgroundColor="#1a1a1a";
+    document.getElementsByClassName("button")[16].style.backgroundColor="#1a1a1a";
+    document.getElementsByClassName("button")[17].style.backgroundColor="#1a1a1a";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
