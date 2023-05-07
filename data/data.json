@@ -523,7 +523,7 @@
         "quality":"4",
         "img":["./Images/Char_Icon/Collie.png","./Images/Characters/Sumeru/Collie.png"],
         "country":"Sumeru",
-        "vision":["Dendro","Dendro"],
+        "vision":["Dendro","./Images/Vision_Icon/Dendro.png"],
         "weapon":["Bow","./Images/Weapon_Icon/Icon_Bow.webp"],
         "about":"A trainee ranger active in Avidya Forest. Behind her enthusiastic words and actions hides a slightly introverted personality.",
         
