@@ -393,7 +393,7 @@
                 "built":"Burst Support",
 
                 "weapon_1":["Mistsplitter Reforged (5☆)","./Images/Weapons/Sword/Weapon_Mistsplitter_Reforged.webp"],
-                "weapon_2":["Aquila Favonia (5☆)",       "./Images/Weapons/Sword/Weapon_Amenoma_Kageuchi.webp"],
+                "weapon_2":["Aquila Favonia (5☆)",       "./Images/Weapons/Sword/Weapon_Aquila_Favonia.webp"],
                 "weapon_3":["Skyward Blade (5☆)",        "./Images/Weapons/Sword/Weapon_Skyward_Blade.webp"],
                 "weapon_4":["Freedom-Sworn (5☆)",        "./Images/Weapons/Sword/Weapon_Freedom-Sworn.webp"],
                 "weapon_5":["The Alley Flash (4☆)",      "./Images/Weapons/Sword/Weapon_The_Alley_Flash.webp"],
@@ -518,8 +518,8 @@
     },
 
     {
-        "name": "Collie",
-        "fullname":"Collie",
+        "name": "Collei",
+        "fullname":"Collei",
         "quality":"4",
         "img":["./Images/Char_Icon/Collie.png","./Images/Characters/Sumeru/Collie.png"],
         "country":"Sumeru",
@@ -553,9 +553,70 @@
                 "talent_order":["Burst","Skill","Normal"]
             }
         ]
+    },
+
+    {
+        "name": "Cyno",
+        "fullname":"Cyno",
+        "quality":"5",
+        "img":["./Images/Char_Icon/Cyno.png","./Images/Characters/Sumeru/Cyno.png"],
+        "country":"Sumeru",
+        "vision":["Electro","./Images/Vision_Icon/Electro.png"],
+        "weapon":["Polearm","./Images/Weapon_Icon/Icon_Polearm.webp"],
+        "about":"The General Mahamatra in charge of supervising the researchers of the Akademiya. It is said that when he gets down to work, the General Mahamatra is even more efficient than the 'Great Vayuvyastra' made by the Kshahrewar.",
+        
+        "build_type":[
+            {   
+                "built":"QuickBloom DPS",
+
+                "weapon_1":["Staff of the Scarlet Sands (5☆)",  "./Images/Weapons/Polearm/Weapon_Staff_of_the_Scarlet_Sands.webp"],
+                "weapon_2":["Dragon's Bane (4☆)",               "./Images/Weapons/Polearm/Weapon_Dragon_Bane.webp"],
+                "weapon_3":["Primordial Jade Winged-Spear (5☆)","./Images/Weapons/Polearm/Weapon_Primordial_Jade_Winged-Spear.webp"],
+                "weapon_4":["White Tassel (3☆) [R5]",           "./Images/Weapons/Polearm/Weapon_White_Tassel.webp"],
+                "weapon_5":["Missive Windspear (4☆) [R5]",      "./Images/Weapons/Polearm/Weapon_Missive_Windspear.webp"],
+                "weapon_6":["Deathmatch (4☆)",                  "./Images/Weapons/Polearm/Weapon_Deathmatch.webp"],
+                "weapon_7":["Staff of Homa (5☆)",               "./Images/Weapons/Polearm/Weapon_Staff_of_Homa.webp"],
+                "weapon_8":["Moonpiercer (4☆)",                 "./Images/Weapons/Polearm/Weapon_Moonpiercer.webp"],
+                "weapon_9":["Prototype Starglitter (4☆)",       "./Images/Weapons/Polearm/Weapon_Prototype_Starglitter.webp"],
+                "weapon_10":["Favonius Lance (4☆)",             "./Images/Weapons/Polearm/Weapon_Favonius_Lance.webp"],
+                        
+                "artifact_1":["Thundering Fury (4 Piece)",                      "./Images/Artifacts/Thundering.webp"],
+                "artifact_2":["Gilded Dreams (4 Piece)",                        "./Images/Artifacts/Gilded.webp"],
+                "artifact_3":["80 EM set (2 Piece) + 80 EM set (2 Piece)",      "./Images/Artifacts/Gilded.webp","./Images/Artifacts/Wanderer.webp"],
+                "artifact_4":["80 EM set (2 Piece) + Thundering Fury (2 Piece)","./Images/Artifacts/Gilded.webp","./Images/Artifacts/Thundering.webp"],
+                "artifact_5":["Gladiator's Finale (4 Piece)",                   "./Images/Artifacts/Gladiator.webp"],
+                      
+                "main_stat":["Elemental Mastery","Electro DMG / Elemental Mastery","Crit Rate / Crit Dmg / EM "],
+                "stat_priority":["Energy Recharge","Elemental Mastery","Crit Rate / DMG","Atk%",""],
+                "talent_order":["Burst","Skill","Normal"]
+            },
+
+            {   
+                "built":"Aggravate DPS",
+
+                "weapon_1":["Staff of the Scarlet Sands (5☆)",  "./Images/Weapons/Polearm/Weapon_Staff_of_the_Scarlet_Sands.webp"],
+                "weapon_2":["Primordial Jade Winged-Spear (5☆)","./Images/Weapons/Polearm/Weapon_Primordial_Jade_Winged-Spear.webp"],
+                "weapon_3":["Staff of Homa (5☆)",               "./Images/Weapons/Polearm/Weapon_Staff_of_Homa.webp"],
+                "weapon_4":["Calamity Queller (5☆)",            "./Images/Weapons/Polearm/Weapon_Calamity_Queller.webp"],
+                "weapon_5":["Deathmatch (4☆)",                  "./Images/Weapons/Polearm/Weapon_Deathmatch.webp"],
+                "weapon_6":["White Tassel (3☆) [R5]",           "./Images/Weapons/Polearm/Weapon_White_Tassel.webp"],
+                "weapon_7":["Skyward Spine (5☆)",               "./Images/Weapons/Polearm/Weapon_Skyward_Spine.webp"],
+                "weapon_8":["Kitain Cross Spear (4☆)",          "./Images/Weapons/Polearm/Weapon_Kitain_Cross_Spear.webp"],
+                "weapon_9":["Missive Windspear (4☆) [R5]",      "./Images/Weapons/Polearm/Weapon_Missive_Windspear.webp"],
+                "weapon_10":["Favonius Lance (4☆)",             "./Images/Weapons/Polearm/Weapon_Favonius_Lance.webp"],
+                        
+                "artifact_1":["Gladiator's Finale (4 Piece)",                          "./Images/Artifacts/Gladiator.webp"],
+                "artifact_2":["Gilded Dreams (4 Piece)",                               "./Images/Artifacts/Gilded.webp"],
+                "artifact_3":["18% ATK set (2 Piece) + Thundering Fury (2 Piece)",     "./Images/Artifacts/Gladiator.webp","./Images/Artifacts/Thundering.webp"],
+                "artifact_4":["Emblem of Severed Fate (2 Piece) + 80 EM set (2 Piece)","./Images/Artifacts/Emblem.webp","./Images/Artifacts/Wanderer.webp"],
+                "artifact_5":["Thundersoother (4 Piece)",                              "./Images/Artifacts/Thundersoother.webp"],
+                      
+                "main_stat":["Elemental Mastery / Atk%","Electro DMG","Crit Rate / Crit Dmg"],
+                "stat_priority":["Energy Recharge","Crit Rate / Crit Dmg","Atk%","Elemental Mastery",""],
+                "talent_order":["Burst","Skill","Normal"]
+            }
+        ]
     }
-
-
 
 
 
