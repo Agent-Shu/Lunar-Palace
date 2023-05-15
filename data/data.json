@@ -616,6 +616,44 @@
                 "talent_order":["Burst","Skill","Normal"]
             }
         ]
+    },
+
+    {
+        "name": "",
+        "fullname":"",
+        "quality":"",
+        "img":["",""],
+        "country":"",
+        "vision":["",""],
+        "weapon":["",""],
+        "about":"",
+        
+        "build_type":[
+            {   
+                "built":"",
+
+                "weapon_1":["",""],
+                "weapon_2":["",""],
+                "weapon_3":["",""],
+                "weapon_4":["",""],
+                "weapon_5":["",""],
+                "weapon_6":["",""],
+                "weapon_7":["",""],
+                "weapon_8":["",""],
+                "weapon_9":["",""],
+                "weapon_10":["",""],
+                        
+                "artifact_1":["",""],
+                "artifact_2":["",""],
+                "artifact_3":["",""],
+                "artifact_4":["",""],
+                "artifact_5":["",""],
+                      
+                "main_stat":["","",""],
+                "stat_priority":["","","","",""],
+                "talent_order":["","",""]
+            }
+        ]
     }
 
 
