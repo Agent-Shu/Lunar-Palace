@@ -1425,31 +1425,11 @@ function submission_confirm(ch){
 }
 
 function button_clear(){
-    document.getElementsByClassName("button")[0].style.backgroundColor="#1a1a1a";
-    document.getElementsByClassName("button")[1].style.backgroundColor="#1a1a1a";
-    document.getElementsByClassName("button")[2].style.backgroundColor="#1a1a1a";
-    document.getElementsByClassName("button")[3].style.backgroundColor="#1a1a1a";
-    document.getElementsByClassName("button")[4].style.backgroundColor="#1a1a1a";
-    document.getElementsByClassName("button")[5].style.backgroundColor="#1a1a1a";
-    document.getElementsByClassName("button")[6].style.backgroundColor="#1a1a1a";
-    document.getElementsByClassName("button")[7].style.backgroundColor="#1a1a1a";
-    document.getElementsByClassName("button")[8].style.backgroundColor="#1a1a1a";
-    document.getElementsByClassName("button")[2].style.backgroundColor="#1a1a1a";
-    document.getElementsByClassName("button")[3].style.backgroundColor="#1a1a1a";
-    document.getElementsByClassName("button")[4].style.backgroundColor="#1a1a1a";
-    document.getElementsByClassName("button")[5].style.backgroundColor="#1a1a1a";
-    document.getElementsByClassName("button")[6].style.backgroundColor="#1a1a1a";
-    document.getElementsByClassName("button")[7].style.backgroundColor="#1a1a1a";
-    document.getElementsByClassName("button")[8].style.backgroundColor="#1a1a1a";
-    document.getElementsByClassName("button")[9].style.backgroundColor="#1a1a1a";
-    document.getElementsByClassName("button")[10].style.backgroundColor="#1a1a1a";
-    document.getElementsByClassName("button")[11].style.backgroundColor="#1a1a1a";
-    document.getElementsByClassName("button")[12].style.backgroundColor="#1a1a1a";
-    document.getElementsByClassName("button")[13].style.backgroundColor="#1a1a1a";
-    document.getElementsByClassName("button")[14].style.backgroundColor="#1a1a1a";
-    document.getElementsByClassName("button")[15].style.backgroundColor="#1a1a1a";
-    document.getElementsByClassName("button")[16].style.backgroundColor="#1a1a1a";
-    document.getElementsByClassName("button")[17].style.backgroundColor="#1a1a1a";
+    for(let i = 0; i <= 17 ; i++){
+
+        document.getElementsByClassName("button")[i].style.backgroundColor="#1a1a1a";
+
+    }
 }
 
 

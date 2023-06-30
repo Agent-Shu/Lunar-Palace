@@ -619,23 +619,47 @@
     },
 
     {
-        "name": "",
-        "fullname":"",
-        "quality":"",
-        "img":["",""],
-        "country":"",
-        "vision":["",""],
-        "weapon":["",""],
-        "about":"",
+        "name": "Dehya",
+        "fullname":"Dehya",
+        "quality":"5",
+        "img":["Images/Char_Icon/Dehya.png","Images/Characters/Sumeru/Dehya.png"],
+        "country":"Sumeru",
+        "vision":["Pyro","./Images/Vision_Icon/Pyro.png"],
+        "weapon":["Claymore","./Images/Weapon_Icon/Icon_Claymore.webp"],
+        "about":"A member of the Eremites, a mercenary organization that roams the sands of Sumeru. Valiant and powerful, she enjoys great fame amongst her fellow Eremites.",
         
         "build_type":[
             {   
-                "built":"",
+                "built":"ON Field DPS",
 
-                "weapon_1":["",""],
-                "weapon_2":["",""],
-                "weapon_3":["",""],
-                "weapon_4":["",""],
+                "weapon_1":["Beacon of the Reed Sea (5☆)","./Images/Weapons/Claymore/Weapon_Beacon_of_the_Reed_Sea.webp"],
+                "weapon_2":["Redhorn Stonethresher (5☆)", "./Images/Weapons/Claymore/Weapon_Redhorn_Stonethresher.webp"],
+                "weapon_3":["Wolf's Gravestone (5☆)",     "./Images/Weapons/Claymore/Weapon_Wolfs_Gravestone.webp"],
+                "weapon_4":["Skyward Pride (5☆)",         "./Images/Weapons/Claymore/Weapon_Skyward_Pride.webp"],
+                "weapon_5":["Akuoumaru (4☆)",             "./Images/Weapons/Claymore/Weapon_Akuoumaru.webp"],
+                "weapon_6":["Luxurious Sealord (4☆)",     "./Images/Weapons/Claymore/Weapon_Luxurious_Sea-Lord.webp"],
+                "weapon_7":["Favonius Greatsword (4☆)",   "./Images/Weapons/Claymore/Weapon_Favonius_Greatsword.webp"],
+                "weapon_8":["Prototype Archaic (4☆)",     "./Images/Weapons/Claymore/Weapon_Favonius_Greatsword.webp"],
+                "weapon_9":["",""],
+                "weapon_10":["",""],
+                        
+                "artifact_1":["Emblem of Severed Fate (4 Piece)","./Images/Artifacts/Emblem.webp"],
+                "artifact_2":["Vourukasha's Glow (4 Piece)",     "./Images/Artifacts/Vourukasha.webp"],
+                "artifact_3":["Crimson Witch of Flames (4)",     "./Images/Artifacts/Crimson.webp"],
+                "artifact_4":["Lavawalker (4)",                  "./Images/Artifacts/Lavawalker.webp"],
+                "artifact_5":["",""],
+                      
+                "main_stat":["Atk% / Energy Recharge","Pyro Dmg","Crit Rate / DMG"],
+                "stat_priority":["Energy Recharge","Crit Rate / Crit Dmg","Atk%","Elemental Mastery","HP%"],
+                "talent_order":["Burst","Skill","Normal"]
+            },
+            {   
+                "built":"Support",
+
+                "weapon_1":["Favonius Greatsword (4☆)","./Images/Weapons/Claymore/Weapon_Favonius_Greatsword.webp"],
+                "weapon_2":["Wolf's Gravestone (5☆)",  "./Images/Weapons/Claymore/Weapon_Wolfs_Gravestone.webp"],
+                "weapon_3":["The Bell (4☆)",           "./Images/Weapons/Claymore/Weapon_The_Bell.webp"],
+                "weapon_4":["Prototype Archiac (4☆)",  "./Images/Weapons/Claymore/Weapon_Prototype_Archaic.webp"],
                 "weapon_5":["",""],
                 "weapon_6":["",""],
                 "weapon_7":["",""],
@@ -643,16 +667,42 @@
                 "weapon_9":["",""],
                 "weapon_10":["",""],
                         
-                "artifact_1":["",""],
-                "artifact_2":["",""],
-                "artifact_3":["",""],
-                "artifact_4":["",""],
+                "artifact_1":["Tenacity of the Millelith (4 Piece)",        "./Images/Artifacts/Emblem.webp"],
+                "artifact_2":["+18% HP set (2 Piece) +18% HP set (2 Piece)","./Images/Artifacts/Vourukasha.webp"],
+                "artifact_3":["Instructor (4 Piece)",                       "./Images/Artifacts/Instructor.webp"],
+                "artifact_4":["Lavawalker (4 Piece)",                       "./Images/Artifacts/Lavawalker.webp"],
                 "artifact_5":["",""],
                       
-                "main_stat":["","",""],
-                "stat_priority":["","","","",""],
-                "talent_order":["","",""]
+                "main_stat":["HP%","HP%","HP% / Crit Rate"],
+                "stat_priority":["HP%","Flat HP","Elemental Mastery","Atk%","Flat Atk"],
+                "talent_order":["Skill","Normal","Burst"]
+            },
+            {   
+                "built":"Burgeon",
+
+                "weapon_1":["Mailed Flower (4☆)",          "./Images/Weapons/Claymore/Weapon_Mailed_Flower.webp"],
+                "weapon_2":["Makhaira Aquamarine (4☆)",    "./Images/Weapons/Claymore/Weapon_Makhaira_Aquamarine.webp"],
+                "weapon_3":["Bloodtainted Greatsword (3☆)","./Images/Weapons/Claymore/Weapon_Bloodtainted_Greatsword.webp"],
+                "weapon_4":["Rainslasher (4☆)",            "./Images/Weapons/Claymore/Weapon_Rainslasher.webp"],
+                "weapon_5":["Favonius Greatsword (4☆)",    "./Images/Weapons/Claymore/Weapon_Favonius_Greatsword.webp"],
+                "weapon_6":["",""],
+                "weapon_7":["",""],
+                "weapon_8":["",""],
+                "weapon_9":["",""],
+                "weapon_10":["",""],
+                        
+                "artifact_1":["Flower of Paradise Lost (4 Piece)",         "./Images/Artifacts/Paradise.webp"],
+                "artifact_2":["Gilded Dreams (4 Piece)",                   "./Images/Artifacts/Gilded.webp"],
+                "artifact_3":["+80 EM set (2 Piece) + 80 EM set (2 Piece)","./Images/Artifacts/Gilded.webp","./Images/Artifacts/Wanderer.webp"],
+                "artifact_4":["Crimson Witch of Flames (4 Piece)",         "./Images/Artifacts/Crimson.webp"],
+                "artifact_5":["",""],
+                      
+                "main_stat":["Elemental Mastery","Elemental Mastery","Elemental Mastery"],
+                "stat_priority":["Elemental Mastery","HP%","Flat HP","Crit Rate","Atk%"],
+                "talent_order":["Skill","Normal","Burst"]
             }
+
+
         ]
     }
 
