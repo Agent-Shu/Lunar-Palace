@@ -622,7 +622,7 @@
         "name": "Dehya",
         "fullname":"Dehya",
         "quality":"5",
-        "img":["Images/Char_Icon/Dehya.png","Images/Characters/Sumeru/Dehya.png"],
+        "img":["./Images/Char_Icon/Dehya.png","./Images/Characters/Sumeru/Dehya.png"],
         "country":"Sumeru",
         "vision":["Pyro","./Images/Vision_Icon/Pyro.png"],
         "weapon":["Claymore","./Images/Weapon_Icon/Icon_Claymore.webp"],
