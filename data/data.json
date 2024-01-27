@@ -702,6 +702,44 @@
                 "talent_order":["Skill","Normal","Burst"]
             }
         ]
+    },
+
+    {
+        "name": "Diluc",
+        "fullname":"Diluc",
+        "quality":"5",
+        "img":["./Images/Char_Icon/Diluc.png","./Images/Characters/Mondstadt/Diluc.png"],
+        "country":"Mondstadt",
+        "vision":["Pyro","./Images/Vision_Icon/Pyro.png"],
+        "weapon":["Claymore","./Images/Weapon_Icon/Icon_Claymore.webp"],
+        "about":"The tycoon of a winery empire in Mondstadt, unmatched in every possible way.",
+        
+        "build_type":[
+            {   
+                "built":"DPS",
+
+                "weapon_1":["Redhorn Stonethresher (5☆)" ,"./Images/Weapons/Claymore/Weapon_Redhorn_Stonethresher.webp"],
+                "weapon_2":["Beacon of the Reed Sea (5☆)","./Images/Weapons/Claymore/Weapon_Beacon_of_the_Reed_Sea.webp"],
+                "weapon_3":["Serpent Spine (4☆)",         "./Images/Weapons/Claymore/Weapon_Serpent_Spine.webp"],
+                "weapon_4":["Wolf's Gravestone (5☆)",     "./Images/Weapons/Claymore/Weapon_Wolfs_Gravestone.webp"],
+                "weapon_5":["The Unforged (5☆)",          "./Images/Weapons/Claymore/Weapon_The_Unforged.webp"],
+                "weapon_6":["Rainslasher (4☆)",           "./Images/Weapons/Claymore/Weapon_Rainslasher.webp"],
+                "weapon_7":["Mailed Flower (4☆)",         "./Images/Weapons/Claymore/Weapon_Mailed_Flower.webp"],
+                "weapon_8":["Skyward Pride (5☆)",         "./Images/Weapons/Claymore/Weapon_Skyward_Pride.webp"],
+                "weapon_9":["Song of Broken Pines (5☆)",  "./Images/Weapons/Claymore/Weapon_Song_of_Broken_Pines.webp"],
+                "weapon_10":["Blackcliff Slasher (4☆)",   "./Images/Weapons/Claymore/Weapon_Blackcliff_Slasher.webp"],
+                        
+                "artifact_1":["Crimson Witch of Flames (4)",                   "./Images/Artifacts/Crimson.webp"],
+                "artifact_2":["Gilded Dreams (4)",                             "./Images/Artifacts/Gilded.webp"],
+                "artifact_3":["Crimson Witch of Flames (2) + +18% ATK set (2)","./Images/Artifacts/Crimson.webp", "./Images/Artifacts/Gladiator.webp"],
+                "artifact_4":["Crimson Witch of Flames (2) + +80 EM set (2)",  "./Images/Artifacts/Crimson.webp", "./Images/Artifacts/Gilded.webp"],
+                "artifact_5":["Gladiator's Finale (4)",                        "./Images/Artifacts/Gladiator.webp"],
+                      
+                "main_stat":["Atk% / Elemental Mastery","Pyro Dmg","Crit Rate / DMG"],
+                "stat_priority":["Crit Rate / DMG","Atk%","Elemental Mastery","Energy Recharge","Flat Atk"],
+                "talent_order":["Normal","Skill","Burst"]
+            }
+        ]
     }
 
 
